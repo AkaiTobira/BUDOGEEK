@@ -1,0 +1,1 @@
+Scheme: number of layer_additional informations_name of sprite_number of sprite
