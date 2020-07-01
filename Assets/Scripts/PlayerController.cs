@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    struct PlayerAnimation
+    {
+        string name;
+        Animation animation;
+
+    }
     private Animator playerAnimation;
     public int button;
     public int hitPoints = 3;
