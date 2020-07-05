@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
     struct PlayerAnimation
@@ -18,7 +18,11 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerAnimation = GetComponent<Animator>();
+
+        GetComponent<PlayerAnimationController2>().Play("standing");
     }
+
+/*
 
     // Update is called once per frame
     void Update()
@@ -51,4 +55,5 @@ public class Player : MonoBehaviour
             playerAnimation.SetTrigger("OnTap");
         }
     }
+    */
 }

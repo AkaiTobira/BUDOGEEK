@@ -20,6 +20,7 @@ public class PlayerAnimationController : MonoBehaviour
             name = n; animation = a;
         }
     }
+    
     public IEnumerator delay(float delay)
     {
         yield return new WaitForSeconds(delay);
