@@ -19,10 +19,9 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimation = GetComponent<Animator>();
 
-        GetComponent<PlayerAnimationController2>().Play("standing");
     }
 
-/*
+
 
     // Update is called once per frame
     void Update()
@@ -55,5 +54,4 @@ public class PlayerController : MonoBehaviour
             playerAnimation.SetTrigger("OnTap");
         }
     }
-    */
 }
