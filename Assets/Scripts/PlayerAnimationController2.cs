@@ -24,6 +24,7 @@ public class PlayerAnimationController2 : MonoBehaviour
 
     public void Play(string name, float startPoint = 0f, bool isLooped = false){
         activeAnimationName = name;
+        activeAnimationTime = startPoint;
         m_animation.Play(activeAnimationName);
         SetAnimationStart(startPoint);
         m_animation.wrapMode = WrapMode.Loop;
