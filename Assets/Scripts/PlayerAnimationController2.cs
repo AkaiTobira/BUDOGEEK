@@ -27,7 +27,7 @@ public class PlayerAnimationController2 : MonoBehaviour
         activeAnimationTime = startPoint;
         m_animation.Play(activeAnimationName);
         SetAnimationStart(startPoint);
-        m_animation.wrapMode = WrapMode.Loop;
+        m_animation.wrapMode = (isLooped) ? WrapMode.Loop : WrapMode.Once;
     }
 
     public void Stop(){
