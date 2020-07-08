@@ -1700,11 +1700,7 @@ GameObject:
   - component: {fileID: 1716290213}
   - component: {fileID: 1716290210}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: player
-=======
   m_Name: Player
->>>>>>> 65d366f196f535b8024c53e7a3cd5264b28b73d3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
