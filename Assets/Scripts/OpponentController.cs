@@ -87,9 +87,8 @@ public class OpponentController : MonoBehaviour
             case 1:
                 yield return new WaitForSeconds(4);
                 SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
-                                 ninjasOfRightSide[2],
-                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
-                                 ninjasOfLeftSide[2]);
+                                 ninjasOfRightSide[2], ninjasOfLeftSide[0],
+                                 ninjasOfLeftSide[1], ninjasOfLeftSide[2]);
                 break;
             case 2:
                 yield return new WaitForSeconds(4);

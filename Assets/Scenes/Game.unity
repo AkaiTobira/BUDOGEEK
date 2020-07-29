@@ -4805,6 +4805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ninjasOfLeftSide: []
   ninjasOfRightSide: []
+  pillow: {fileID: 0}
+  plate: {fileID: 0}
   levelManager: {fileID: 0}
 --- !u!1 &502014521
 GameObject:
@@ -8403,15 +8405,13 @@ MonoBehaviour:
   - {fileID: 1384253295}
   - {fileID: 850145540}
   - {fileID: 497742526}
-  - {fileID: 1715169331}
-  - {fileID: 320422149}
   ninjasOfRightSide:
   - {fileID: 1166025425}
   - {fileID: 1384253295}
   - {fileID: 850145540}
   - {fileID: 497742526}
-  - {fileID: 1715169331}
-  - {fileID: 320422149}
+  pillow: {fileID: 1715169331}
+  plate: {fileID: 320422149}
   levelManager: {fileID: 0}
 --- !u!1 &1062048376
 GameObject:
