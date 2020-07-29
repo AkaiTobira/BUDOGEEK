@@ -3049,7 +3049,11 @@ MonoBehaviour:
   blueNinjaButtons:
   - {fileID: 229654206}
   - {fileID: 1226485467}
-  purpleNinjaButtons: []
+  purpleNinjaButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   orangeNinjaButtons:
   - {fileID: 38587149}
   - {fileID: 442043013}

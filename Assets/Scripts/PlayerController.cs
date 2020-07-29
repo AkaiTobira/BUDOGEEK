@@ -155,6 +155,7 @@ public class PlayerController : MonoBehaviour
     }
     public void InputControllers()
     {
+        HandleAndriodInput();
         if (Input.GetButtonDown("Fire1"))
         {
             //if do not click any button
@@ -174,6 +175,30 @@ public class PlayerController : MonoBehaviour
             {
                 facingRight = true;
                 SwapAnimation();
+            }
+        }
+    }
+    private void HandleAndriodInput()
+    {
+        foreach (Touch t in Input.touches)
+        {
+            playerAnimation.SetTrigger("technique");
+            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(t.position);
+            if (touchPosition.x > transform.position.x)
+            {
+                if (!facingRight)
+                {
+                    facingRight = true;
+                    SwapAnimation();
+                }
+            }
+            else
+            {
+                if (facingRight)
+                {
+                    facingRight = false;
+                    SwapAnimation();
+                }
             }
         }
     }
