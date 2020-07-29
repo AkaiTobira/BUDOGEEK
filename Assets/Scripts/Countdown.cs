@@ -14,7 +14,6 @@ public class Countdown : MonoBehaviour
         countdownAnimator = GetComponent<Animator>();
         countdownText.text = "3";
     }
-
     // Update is called once per frame
     void Update()
     {

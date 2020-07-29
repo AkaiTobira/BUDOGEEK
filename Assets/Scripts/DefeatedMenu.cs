@@ -14,8 +14,9 @@ public class DefeatedMenu : MonoBehaviour
         defeatMenu.SetActive(true);
         Time.timeScale = 0f;
     }
-    public void TryAgainOnClick(GameObject defeatedMenuUI)
+    public void TryAgainOnClick()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void QuitGame()
@@ -24,6 +25,7 @@ public class DefeatedMenu : MonoBehaviour
     }
     public void GoToMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     void Start()

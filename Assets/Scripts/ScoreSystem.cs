@@ -5,18 +5,17 @@ using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
-    public PlayerController player;
     public int score;
     public Text scoreText;
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
-        score = player.scorePoints;
+        score = 0;
         scoreText.text = "" + score;
     }
-    void Update()
+    public void AddToScore(int value)
     {
-        score = player.scorePoints;
+        score += value;
         scoreText.text = "" + score;
+        FindObjectOfType<LevelManager>().CheckLevelProgress(score);
     }
 }

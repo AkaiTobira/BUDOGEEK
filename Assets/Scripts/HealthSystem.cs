@@ -25,7 +25,6 @@ public class HealthSystem : MonoBehaviour
     }
     public void ChangeHealthStatus(int hp)
     {
-        Debug.Log(hp);
         ChangeTransparencyOfHeartImage(heartImages[hp]);
     }
 }

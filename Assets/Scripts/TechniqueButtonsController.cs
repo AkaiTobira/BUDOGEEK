@@ -13,7 +13,6 @@ public class TechniqueButtonsController : MonoBehaviour
         int tmp = Random.Range(0, techNinjaButtons.Length + 1);
         foreach (var button in techNinjaButtons)
         {
-            //if (button.)
             button.SetActive(false);
         }
         techNinjaButtons[tmp].SetActive(true);

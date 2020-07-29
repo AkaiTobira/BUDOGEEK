@@ -5,122 +5,77 @@ using UnityEngine;
 
 public class OpponentController : MonoBehaviour
 {
+    private Dictionary<int, List<int>> enemyOfLevels;
     public GameObject[] ninjasOfLeftSide;
     public GameObject[] ninjasOfRightSide;
-    public GameObject pillow;
-    public GameObject plate;
+    public GameObject[] pillow;
+    public GameObject[] plate;
     public LevelManager levelManager;
+    private const float TIME_TO_THROW_PILLOW = 0.25f;
+    private const float TIME_TO_THROW_PLATE = 0.5f;
+    private float timerToSpawnEnemy = 0;
+    private float[] TIME_SPAWN_DELAY = { 3f, 3f, 3f, 3f, 2f, 2f, 2f };
+
     // Start is called before the first frame update
     void Start()
     {
         levelManager = FindObjectOfType<LevelManager>();
+        FillEnemyOfLevels();
     }
     // Update is called once per frame
     void Update()
     {
-        SpawnRandomNinjaDependingOnCurrentLevel();
+        timerToSpawnEnemy -= Time.deltaTime; 
+        if (timerToSpawnEnemy < 0)
+        {
+            SpawnRandomNinjaDependingOnCurrentLevel();
+            timerToSpawnEnemy = TIME_SPAWN_DELAY[levelManager.currentLevel];
+        }
     }
-
+    private void FillEnemyOfLevels()
+    {
+        enemyOfLevels = new Dictionary<int, List<int>>();
+        enemyOfLevels[0] = new List<int>() { 0, 1 };
+        enemyOfLevels[1] = new List<int>() { 0, 1, 2 };
+        enemyOfLevels[2] = new List<int>() { 0, 2 };
+        enemyOfLevels[3] = new List<int>() { 0, 1, 2, 3 };
+        enemyOfLevels[4] = new List<int>() { 0, 3 };
+        enemyOfLevels[5] = new List<int>() { 0, 1, 2, 3 };
+        enemyOfLevels[6] = new List<int>() { 0, 1, 2, 3 };
+    }
     public void SpawnRandomNinjaDependingOnCurrentLevel()
     {
-        //4 - pillow, 5 - plate
-        switch (levelManager.currentLevel)
+        List<GameObject> enemies = new List<GameObject>();
+        foreach (int index in enemyOfLevels[levelManager.currentLevel])
         {
-            case 0:
-                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+            enemies.Add(ninjasOfLeftSide[index]);
+            enemies.Add(ninjasOfRightSide[index]);
+        }
+        SpawnRandomNinja(enemies);
+    }
+    public void SpawnRandomNinja(List<GameObject> tabOfNinjas)
+    {
+        int tmp = UnityEngine.Random.Range(0, tabOfNinjas.Count);
+        tabOfNinjas[tmp].GetComponent<Animator>().SetTrigger("attack");
+        switch (tabOfNinjas[tmp].name)
+        {
+            case "opponent_pillow":
+                StartCoroutine(ThrowObject(pillow[tmp % 2], TIME_TO_THROW_PILLOW));
                 break;
-            case 1:
-                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+            case "opponent_plate":
+                StartCoroutine(ThrowObject(plate[tmp % 2], TIME_TO_THROW_PLATE));
                 break;
-            case 2:
-                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+            case "opponent_board":
+            case "opponent_mop":
                 break;
-            case 3:
-                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
-                break;
-            case 4:
-                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
-                break;
-            case 5:
-                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
-                break;
-            case 6:
-                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+            default:
+                Debug.LogError("Get invalid name of ninja! " + tabOfNinjas[tmp].name);
                 break;
         }
     }
-    public void SpawnRandomNinja(params GameObject[] tabOfNinjas)
+    IEnumerator ThrowObject(GameObject obj, float time)
     {
-        int tmp = UnityEngine.Random.Range(0, tabOfNinjas.Length);
-        if (tabOfNinjas[tmp].name == "pillow_ninja")
-        {
-            tabOfNinjas[tmp].GetComponent<Animator>().SetTrigger("attack");
-            StartCoroutine(ThrowPillow(pillow));
-        }
-        else if (tabOfNinjas[tmp].name == "plate_ninja")
-        {
-            tabOfNinjas[tmp].GetComponent<Animator>().SetTrigger("attack");
-            StartCoroutine(ThrowPlate(plate));
-        }
-        else
-            tabOfNinjas[tmp].GetComponent<Animator>().SetTrigger("attack");
-    }
-    IEnumerator ThrowPillow(GameObject pillow)
-    {
-        yield return new WaitForSeconds(0.25f);
-        pillow.GetComponent<Animator>().SetTrigger("throw");
-    }
-    IEnumerator ThrowPlate(GameObject plate)
-    {
-        yield return new WaitForSeconds(0.5f);
-        plate.GetComponent<Animator>().SetTrigger("throw");
-    }
-    IEnumerator WaitBeforeSpawnNinja(LevelManager lvlManager)
-    {
-        switch(lvlManager.currentLevel)
-        {
-            case 0:
-                yield return new WaitForSeconds(4);
-                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
-                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1]);
-                break;
-            case 1:
-                yield return new WaitForSeconds(4);
-                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
-                                 ninjasOfRightSide[2], ninjasOfLeftSide[0],
-                                 ninjasOfLeftSide[1], ninjasOfLeftSide[2]);
-                break;
-            case 2:
-                yield return new WaitForSeconds(4);
-                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[2],
-                                  ninjasOfLeftSide[0], ninjasOfLeftSide[2]);
-                break;
-            case 3:
-                yield return new WaitForSeconds(4);
-                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
-                                 ninjasOfRightSide[2], ninjasOfRightSide[3],
-                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
-                                 ninjasOfLeftSide[2], ninjasOfLeftSide[3]);
-                break;
-            case 4:
-                yield return new WaitForSeconds(4);
-                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[3],
-                                 ninjasOfLeftSide[0], ninjasOfLeftSide[3]);
-                break;
-            case 5:
-                yield return new WaitForSeconds(3);
-                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
-                                 ninjasOfRightSide[2], ninjasOfRightSide[3],
-                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
-                                 ninjasOfLeftSide[2], ninjasOfLeftSide[3]);
-                break;
-            case 6:
-                yield return new WaitForSeconds(2);
-                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
-                                 ninjasOfRightSide[2], ninjasOfRightSide[3],
-                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
-                                 ninjasOfLeftSide[2], ninjasOfLeftSide[3]);
-                break;
-        }
+        yield return new WaitForSeconds(time);
+        obj.GetComponent<Animator>().SetTrigger("attack");
     }
 }

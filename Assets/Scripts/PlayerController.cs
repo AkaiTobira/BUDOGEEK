@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         levelManager = FindObjectOfType<LevelManager>();
-        techniqueButtons = FindObjectOfType<TechniqueButtonsController>();
-        defeatMenu = FindObjectOfType<DefeatedMenu>();
+        //techniqueButtons = transform.parent.Find("")<TechniqueButtonsController>();
+        //defeatMenu = transform.parent.Find("DefeatMenu").GetComponent<DefeatedMenu>();
         rigidbody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         hitPoints = 2;
@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
     }
     public void ChangeLayerDefaultWeight()
     {
-        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Base Layer"), 0f);
         playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 0"), 0f);
         playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 1"), 0f);
         playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 2"), 0f);
@@ -116,9 +115,14 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimation.SetTrigger("losing");
             health.ChangeHealthStatus(0);
-            defeatMenu.PauseGameIfPlayerIsDefeted();
+            StartCoroutine(WaitToEndOfAnimations());
             //respawn/reset
         }
+    }
+    IEnumerator WaitToEndOfAnimations()
+    {
+        yield return new WaitForSeconds(1f);
+        defeatMenu.PauseGameIfPlayerIsDefeted();
     }
     public void GettingScorePoint()
     {
@@ -128,16 +132,28 @@ public class PlayerController : MonoBehaviour
     {
         jenCoins++;
     }
-
-    public void OnTriggerEnter2D(Collider2D collision)
+    private bool IsInvalidState()
     {
-        if (playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_white") ||
+        return playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_white") ||
             playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_yellow") ||
             playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_orange") ||
             playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_green") ||
             playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_blue") ||
             playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_brown") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_black"))
+            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_black");
+    }
+    private bool IsValidDirection(Collider2D collision)
+    {
+        float posX = collision.GetComponent<Transform>().position.x;
+        if (posX > 0 && facingRight)
+            return true;
+        if (posX < 0 && !facingRight)
+            return true;
+        return false;
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (IsInvalidState() || !IsValidDirection(collision) || !TechniqueMatcher.CheckIfTechniqueIsEffective(collision.tag, idTechnique))
         {
             GettingHit();
             //freeze for a while
@@ -147,7 +163,8 @@ public class PlayerController : MonoBehaviour
             //Time.timeScale = 1f;
         }
         else
-            GettingScorePoint();
+            FindObjectOfType<ScoreSystem>().AddToScore(1);
+
     }
     IEnumerator WaitAWhile()
     {
