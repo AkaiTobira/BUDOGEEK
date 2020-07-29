@@ -12,24 +12,66 @@ public class PlayerController : MonoBehaviour
     private new Rigidbody2D rigidbody;
     public int hitPoints;
     public int scorePoints;
+    public int jenCoins;
     public int idTechnique;//?
     private bool facingRight = true;
     public Text scoreText;
     public HealthSystem health;
+    public LevelManager levelManager;
+    public TechniqueButtonsController techniqueButtons;
+    public DefeatedMenu defeatMenu;
     // Start is called before the first frame update
     void Start()
     {
+        levelManager = FindObjectOfType<LevelManager>();
+        techniqueButtons = FindObjectOfType<TechniqueButtonsController>();
+        defeatMenu = FindObjectOfType<DefeatedMenu>();
         rigidbody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         hitPoints = 2;
         scorePoints = 0;
-        //ChangeCurrentTechniqueDueToCurrentScene();
+        jenCoins = 0;
     }
     // Update is called once per frame
     void Update()
     {
         InputControllers();
-        //m_transform.position += new Vector3(0, Time.deltaTime, 0);
+        ChangeLayerDefaultWeight();
+    }
+    public void ChangeLayerDefaultWeight()
+    {
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Base Layer"), 0f);
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 0"), 0f);
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 1"), 0f);
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 2"), 0f);
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 3"), 0f);
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 4"), 0f);
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 5"), 0f);
+        playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 6"), 0f);
+        switch (levelManager.currentLevel)
+        {
+            case 0:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 0"), 1f);
+                break;
+            case 1:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 1"), 1f);
+                break;
+            case 2:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 2"), 1f);
+                break;
+            case 3:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 3"), 1f);
+                break;
+            case 4:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 4"), 1f);
+                break;
+            case 5:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 5"), 1f);
+                break;
+            case 6:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 6"), 1f);
+                break;
+        }
     }
     private void SwapAnimation()
     {
@@ -41,6 +83,26 @@ public class PlayerController : MonoBehaviour
     {
         idTechnique = idTech;
         playerAnimation.SetInteger("idTechnique", idTechnique);
+        //brown obi
+        if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 || 
+            idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
+        else if (idTechnique == 21 || idTechnique == 29)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
+        else if (idTechnique == 22 || idTechnique == 25 || idTechnique == 26 || idTechnique == 30)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
+        else if (idTechnique == 27 || idTechnique == 33)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
+        //black obi
+        else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 || 
+            idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
+        else if (idTechnique == 37 || idTechnique == 45)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
+        else if (idTechnique == 38 || idTechnique == 41 || idTechnique == 42 || idTechnique == 46)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
+        else if (idTechnique == 43 || idTechnique == 49)
+            techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
     }
     public void GettingHit()
     {
@@ -54,6 +116,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimation.SetTrigger("losing");
             health.ChangeHealthStatus(0);
+            defeatMenu.PauseGameIfPlayerIsDefeted();
             //respawn/reset
         }
     }
@@ -61,17 +124,35 @@ public class PlayerController : MonoBehaviour
     {
         scorePoints++;
     }
+    public void GettingJenCoin()
+    {
+        jenCoins++;
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("getting_hit") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("losing"))
+        if (playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_white") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_yellow") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_orange") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_green") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_blue") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_brown") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_black"))
+        {
             GettingHit();
+            //freeze for a while
+            //StartCoroutine(WaitAWhile());
+            //Time.timeScale = 0f;
+            //StartCoroutine(WaitAWhile());
+            //Time.timeScale = 1f;
+        }
         else
             GettingScorePoint();
     }
-
+    IEnumerator WaitAWhile()
+    {
+        yield return new WaitForSeconds(0.5f);
+    }
     public void InputControllers()
     {
         if (Input.GetButtonDown("Fire1"))

@@ -1,0 +1,58 @@
+IdTechnique
+white
+1	0_oizuki
+2	0_ageuke
+yellow
+3	1_maegeri
+4	1_oizuki
+5	1_ageuke
+6	1_gedanbarai
+orange
+7	2_nukite
+8	2_yokogeri_kekomi
+9	2_shutouke
+10	2_sotouke
+green
+11	3_mawashi
+12	3_yoko_enpiuchi
+13	3_yokogeri_keage
+14	3_uchi_udeuke
+blue
+15	4_gyakuzuki
+16	4_kizami_zuki
+17	4_uraken_uchi
+18	4_ushirogeri
+brown
+19	1_maegeri
+20	1_oizuki
+21	1_ageuke
+22	1_gedanbarai
+23	2_nukite
+24	2_yokogeri_kekomi
+25	2_shutouke
+26	2_sotouke
+27	3_mawashi
+28	3_yoko_enpiuchi
+29	3_yokogeri_keage
+30	3_uchi_udeuke
+31	4_gyakuzuki
+32	4_kizami_zuki
+33	4_uraken_uchi
+34	4_ushirogeri
+black
+35	1_maegeri
+36	1_oizuki
+37	1_ageuke
+38	1_gedanbarai
+39	2_nukite
+40	2_yokogeri_kekomi
+41	2_shutouke
+42	2_sotouke
+43	3_mawashi
+44	3_yoko_enpiuchi
+45	3_yokogeri_keage
+46	3_uchi_udeuke
+47	4_gyakuzuki
+48	4_kizami_zuki
+49	4_uraken_uchi
+50	4_ushirogeri

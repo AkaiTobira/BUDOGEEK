@@ -1,67 +1,134 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OpponentController : MonoBehaviour
 {
-    public Animation animation;
-    public int[] tabOfNinjasId;
-    public int currentLevel;
+    public GameObject[] ninjasOfLeftSide;
+    public GameObject[] ninjasOfRightSide;
+    public LevelManager levelManager;
     // Start is called before the first frame update
     void Start()
     {
-        animation = GetComponent<Animation>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
-
     // Update is called once per frame
     void Update()
     {
-        animation.Play();
-        PlayPlateNinjaAnimation();
+        SpawnRandomNinjaDependingOnCurrentLevel();
     }
 
-    public void SpawnRandomNinja()
+    public void SpawnRandomNinjaDependingOnCurrentLevel()
     {
-        if (currentLevel == 0)
+        //4 - pillow, 5 - plate
+        switch (levelManager.currentLevel)
         {
-
-        }
-            int tmp = Random.Range(0, 3);
-        switch(tmp)
-        {
+            case 0:
+                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
+                                 ninjasOfRightSide[4], ninjasOfLeftSide[0],
+                                 ninjasOfLeftSide[1], ninjasOfLeftSide[4]);
+                break;
             case 1:
-                animation.Play();
+                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
+                                 ninjasOfRightSide[2], ninjasOfRightSide[4], 
+                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
+                                 ninjasOfLeftSide[2], ninjasOfLeftSide[4]);
                 break;
             case 2:
-                animation.Play();
+                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[2],
+                                  ninjasOfRightSide[4], ninjasOfLeftSide[0], 
+                                  ninjasOfLeftSide[2], ninjasOfLeftSide[4]);
                 break;
             case 3:
-                animation.Play();
+                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
+                                 ninjasOfRightSide[2], ninjasOfRightSide[3],
+                                 ninjasOfRightSide[4], ninjasOfRightSide[5],
+                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
+                                 ninjasOfLeftSide[2], ninjasOfLeftSide[3],
+                                 ninjasOfLeftSide[4], ninjasOfLeftSide[5]);
                 break;
             case 4:
-                animation.Play();
+                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[3],
+                                 ninjasOfRightSide[4], ninjasOfLeftSide[0], 
+                                 ninjasOfLeftSide[3], ninjasOfLeftSide[4]);
+                break;
+            case 5:
+                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
+                                 ninjasOfRightSide[2], ninjasOfRightSide[3],
+                                 ninjasOfRightSide[4], ninjasOfRightSide[5],
+                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
+                                 ninjasOfLeftSide[2], ninjasOfLeftSide[3],
+                                 ninjasOfLeftSide[4], ninjasOfLeftSide[5]);
+                break;
+            case 6:
+                StartCoroutine(WaitBeforeSpawnNinja(levelManager));
+                SpawnRandomNinja(ninjasOfRightSide[0], ninjasOfRightSide[1],
+                                 ninjasOfRightSide[2], ninjasOfRightSide[3],
+                                 ninjasOfRightSide[4], ninjasOfRightSide[5],
+                                 ninjasOfLeftSide[0], ninjasOfLeftSide[1],
+                                 ninjasOfLeftSide[2], ninjasOfLeftSide[3],
+                                 ninjasOfLeftSide[4], ninjasOfLeftSide[5]);
                 break;
         }
-
     }
-    public void PlayPillowNinjaAnimation()
+    public void SpawnRandomNinja(params GameObject[] tabOfNinjas)
     {
-        if (animation.IsPlaying("pillow_ninja"))
-            StartCoroutine(ThrowPillow());
+        int tmp = UnityEngine.Random.Range(0, tabOfNinjas.Length + 1);
+        if (tabOfNinjas[tmp].name == "pillow_ninja")
+        {
+            tabOfNinjas[tmp].GetComponent<Animator>().SetTrigger("attack");
+            StartCoroutine(ThrowPillow(tabOfNinjas[tmp]));
+        }
+        else if (tabOfNinjas[tmp].name == "plate_ninja")
+        {
+            tabOfNinjas[tmp].GetComponent<Animator>().SetTrigger("attack");
+            StartCoroutine(ThrowPlate(tabOfNinjas[tmp]));
+        }
+        else
+            tabOfNinjas[tmp].GetComponent<Animator>().SetTrigger("attack");
     }
-    IEnumerator ThrowPillow()
+    IEnumerator ThrowPillow(GameObject ninja)
     {
         yield return new WaitForSeconds(0.25f);
-        animation.Play("pillow");
+        ninja.GetComponent<Animator>().SetTrigger("throw");
     }
-    public void PlayPlateNinjaAnimation()
-    {
-        if (animation.IsPlaying("plate_ninja"))
-            StartCoroutine(ThrowPlate());
-    }
-    IEnumerator ThrowPlate()
+    IEnumerator ThrowPlate(GameObject ninja)
     {
         yield return new WaitForSeconds(0.5f);
-        animation.Play("plate");
+        ninja.GetComponent<Animator>().SetTrigger("throw");
+    }
+    IEnumerator WaitBeforeSpawnNinja(LevelManager lvlManager)
+    {
+        switch(lvlManager.currentLevel)
+        {
+            case 0:
+                yield return new WaitForSeconds(180);
+                break;
+            case 1:
+                yield return new WaitForSeconds(170);
+                break;
+            case 2:
+                yield return new WaitForSeconds(160);
+                break;
+            case 3:
+                yield return new WaitForSeconds(150);
+                break;
+            case 4:
+                yield return new WaitForSeconds(140);
+                break;
+            case 5:
+                yield return new WaitForSeconds(130);
+                break;
+            case 6:
+                yield return new WaitForSeconds(120);
+                break;
+        }
     }
 }
