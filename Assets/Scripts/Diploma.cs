@@ -8,6 +8,7 @@ public class Diploma : MonoBehaviour
     public Text scoreText;
     public Text jenText;
     public PlayerController player;
+    public GameObject diploma;
     void Start()
     {
         player = FindObjectOfType<PlayerController>();

@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public LevelManager levelManager;
     public TechniqueButtonsController techniqueButtons;
     public DefeatedMenu defeatMenu;
+    public bool clickedButton = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         hitPoints = 2;
-        scorePoints = 0;
+        scorePoints = FindObjectOfType<ScoreSystem>().score;
         jenCoins = 0;
     }
     // Update is called once per frame
@@ -115,12 +116,13 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimation.SetTrigger("losing");
             health.ChangeHealthStatus(0);
-            StartCoroutine(WaitToEndOfAnimations());
+            StartCoroutine(WaitToEndOfAnimation());
             //respawn/reset
         }
     }
-    IEnumerator WaitToEndOfAnimations()
+    IEnumerator WaitToEndOfAnimation()
     {
+        defeatMenu.scorePoints = scorePoints;
         yield return new WaitForSeconds(1f);
         defeatMenu.PauseGameIfPlayerIsDefeted();
     }
@@ -134,21 +136,24 @@ public class PlayerController : MonoBehaviour
     }
     private bool IsInvalidState()
     {
-        return playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_white") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_yellow") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_orange") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_green") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_blue") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_brown") ||
-            playerAnimation.GetCurrentAnimatorStateInfo(0).IsName("standing_black");
+        return playerAnimation.GetCurrentAnimatorStateInfo(levelManager.currentLevel).IsName("standing_white") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(levelManager.currentLevel).IsName("standing_yellow") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(levelManager.currentLevel).IsName("standing_orange") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(levelManager.currentLevel).IsName("standing_green") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(levelManager.currentLevel).IsName("standing_blue") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(levelManager.currentLevel).IsName("standing_brown") ||
+            playerAnimation.GetCurrentAnimatorStateInfo(levelManager.currentLevel).IsName("standing_black");
     }
     private bool IsValidDirection(Collider2D collision)
     {
-        float posX = collision.GetComponent<Transform>().position.x;
-        if (posX > 0 && facingRight)
-            return true;
-        if (posX < 0 && !facingRight)
-            return true;
+        //if (IsInvalidState())
+        //{
+            float posX = collision.GetComponent<Transform>().position.x;
+            if (posX > 0 && facingRight)
+                return true;
+            if (posX < 0 && !facingRight)
+                return true;
+        //}
         return false;
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -168,15 +173,82 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator WaitAWhile()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
+    }
+    public void PressTechniqueButton(params Button[] techniqueButtons)
+    {
+        foreach (Button button in techniqueButtons)
+            if (button.IsActive())
+            {
+                button.onClick.Invoke();
+                var colors = button.colors;
+                colors.normalColor = button.colors.selectedColor;
+                button.colors = colors;
+                clickedButton = true;
+                    
+            }
+    }
+    public void RestoreTechniqueButtonNormalColor(params Button[] techniqueButtons)
+    {
+        foreach (var button in techniqueButtons)
+        {
+            var colors = button.colors;
+            colors.normalColor = button.colors.pressedColor;
+            button.colors = colors;
+        }
+
     }
     public void InputControllers()
     {
         HandleAndriodInput();
-        if (Input.GetButtonDown("Fire1"))
+        /*if (Input.GetButtonDown("Fire1"))
         {
             //if do not click any button
             playerAnimation.SetTrigger("technique");
+        }*/
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (clickedButton)
+            {
+                RestoreTechniqueButtonNormalColor(techniqueButtons.secondButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.thirdButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.fourthButtons);
+                clickedButton = false;
+            }
+            PressTechniqueButton(techniqueButtons.firstButtons);
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (clickedButton)
+            {
+                RestoreTechniqueButtonNormalColor(techniqueButtons.firstButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.thirdButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.fourthButtons);
+                clickedButton = false;
+            }
+            PressTechniqueButton(techniqueButtons.secondButtons);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (clickedButton)
+            {
+                RestoreTechniqueButtonNormalColor(techniqueButtons.firstButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.secondButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.fourthButtons);
+                clickedButton = false;
+            }
+            PressTechniqueButton(techniqueButtons.thirdButtons);
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (clickedButton)
+            {
+                RestoreTechniqueButtonNormalColor(techniqueButtons.firstButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.secondButtons);
+                RestoreTechniqueButtonNormalColor(techniqueButtons.thirdButtons);
+                clickedButton = false;
+            }
+            PressTechniqueButton(techniqueButtons.fourthButtons);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -185,6 +257,7 @@ public class PlayerController : MonoBehaviour
                 facingRight = false;
                 SwapAnimation();
             }
+            playerAnimation.SetTrigger("technique");
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -193,6 +266,7 @@ public class PlayerController : MonoBehaviour
                 facingRight = true;
                 SwapAnimation();
             }
+            playerAnimation.SetTrigger("technique");
         }
     }
     private void HandleAndriodInput()

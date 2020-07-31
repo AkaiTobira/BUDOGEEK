@@ -23,16 +23,12 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         ChangeTechniqueButtonsDependingOnCurrentLevel();
-        DefineMaxScoreDependingOnCurrentLevel();
-        ShowDiplomaIfGainMaxScoreOfCurrentLevel();
-    }
-    public void DefineMaxScoreDependingOnCurrentLevel()
-    {
-        maxScore = maxScores[currentLevel];
     }
     public void ShowDiplomaIfGainMaxScoreOfCurrentLevel()
     {
-        if (player.scorePoints == maxScore)
+        //diploma.diploma.SetActive(true);
+        //Time.timeScale = 0f;
+        if (player.scorePoints == maxScores[currentLevel])
             StartCoroutine(ShowDiploma());
     }
     IEnumerator ShowDiploma()
@@ -42,6 +38,9 @@ public class LevelManager : MonoBehaviour
         countdown.GetComponent<Animator>().SetTrigger("startCountingDown");
         countdown.CountingDown();
         countdown.GetComponent<Text>().text = "3";
+        //yield return new WaitForSeconds(3f);
+        //diploma.diploma.SetActive(false);
+        //Time.timeScale = 1f;
     }
     public void ChangeTechniqueButtonsDependingOnCurrentLevel()
     {

@@ -20,13 +20,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void GoToMainMenu()
     {
-        Time.timeScale = 1f;
         IsGamePaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     public void QuitGame()
     {
-        Time.timeScale = 1f;
         IsGamePaused = false;
         Application.Quit();
     }

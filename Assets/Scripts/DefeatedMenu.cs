@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class DefeatedMenu : MonoBehaviour
 {
     public Text scoreText;
+    public int scorePoints;
     public PlayerController player;
     public GameObject defeatMenu;
+    ScoreSystem scoreSystem;
     public void PauseGameIfPlayerIsDefeted()
     {
         defeatMenu.SetActive(true);
@@ -25,17 +28,17 @@ public class DefeatedMenu : MonoBehaviour
     }
     public void GoToMainMenu()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        scoreText.text = "Wynik: " + player.scorePoints;
+        scoreSystem = FindObjectOfType<ScoreSystem>();
+        scoreText.text = "Wynik: " + scoreSystem.score;
     }
     void Update()
     {
-        scoreText.text = "Wynik: " + player.scorePoints;
+        scoreText.text = "Wynik: " + scoreSystem.score;
     }
 
 }
