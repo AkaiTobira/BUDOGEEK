@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        scorePoints = FindObjectOfType<ScoreSystem>().score;
         InputControllers();
         ChangeLayerDefaultWeight();
     }
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
     {
         idTechnique = idTech;
         playerAnimation.SetInteger("idTechnique", idTechnique);
+        playerAnimation.SetTrigger("technique");
         //brown obi
         if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 || 
             idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
@@ -168,13 +170,17 @@ public class PlayerController : MonoBehaviour
             //Time.timeScale = 1f;
         }
         else
+        {
             FindObjectOfType<ScoreSystem>().AddToScore(1);
+            FindObjectOfType<DiplomasController>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
+        }
 
-    }
+    }/*
     IEnumerator WaitAWhile()
     {
         yield return new WaitForSeconds(1f);
-    }
+    }*/
+    /*
     public void PressTechniqueButton(params Button[] techniqueButtons)
     {
         foreach (Button button in techniqueButtons)
@@ -197,7 +203,7 @@ public class PlayerController : MonoBehaviour
             button.colors = colors;
         }
 
-    }
+    }*/
     public void InputControllers()
     {
         HandleAndriodInput();
@@ -206,6 +212,7 @@ public class PlayerController : MonoBehaviour
             //if do not click any button
             playerAnimation.SetTrigger("technique");
         }*/
+        /*
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (clickedButton)
@@ -249,7 +256,7 @@ public class PlayerController : MonoBehaviour
                 clickedButton = false;
             }
             PressTechniqueButton(techniqueButtons.fourthButtons);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (facingRight)
@@ -269,11 +276,10 @@ public class PlayerController : MonoBehaviour
             playerAnimation.SetTrigger("technique");
         }
     }
-    private void HandleAndriodInput()
+    private void HandleAndriodInput()//ChangeDirection
     {
         foreach (Touch t in Input.touches)
         {
-            playerAnimation.SetTrigger("technique");
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(t.position);
             if (touchPosition.x > transform.position.x)
             {

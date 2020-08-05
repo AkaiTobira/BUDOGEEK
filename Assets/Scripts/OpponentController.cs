@@ -6,6 +6,7 @@ using UnityEngine;
 public class OpponentController : MonoBehaviour
 {
     private Dictionary<int, List<int>> enemyOfLevels;
+    public GameObject opponents;
     public GameObject[] ninjasOfLeftSide;
     public GameObject[] ninjasOfRightSide;
     public GameObject[] pillow;
@@ -14,7 +15,8 @@ public class OpponentController : MonoBehaviour
     private const float TIME_TO_THROW_PILLOW = 0.25f;
     private const float TIME_TO_THROW_PLATE = 0.5f;
     private float timerToSpawnEnemy = 0;
-    private float[] TIME_SPAWN_DELAY = { 3f, 3f, 3f, 3f, 2f, 2f, 2f };
+    private float[] TIME_SPAWN_DELAY = { 3f, 3f, 3f, 3f, 2.75f, 2.5f, 2.25f };
+    public bool IsAchieveMaxScore = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +27,9 @@ public class OpponentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (FindObjectOfType<ScoreSystem>().score != levelManager.maxScores[levelManager.currentLevel])
         timerToSpawnEnemy -= Time.deltaTime; 
-        if (timerToSpawnEnemy < 0)
+        if (timerToSpawnEnemy < 0 && !IsAchieveMaxScore && levelManager.IsGameStarted)
         {
             SpawnRandomNinjaDependingOnCurrentLevel();
             timerToSpawnEnemy = TIME_SPAWN_DELAY[levelManager.currentLevel];
@@ -78,4 +81,17 @@ public class OpponentController : MonoBehaviour
         yield return new WaitForSeconds(time);
         obj.GetComponent<Animator>().SetTrigger("attack");
     }
+    /*
+    public void ResetOpponents()
+    {
+        if (!opponents.activeInHierarchy)
+        {
+            ninjasOfRightSide[0].GetComponent<Animator>().;
+        }
+    }
+    public void ResetOpponent(GameObject[] ninjas)
+    {
+        foreach (GameObject ninja in ninjasOfLeftSide)
+            ninja.GetComponent<Animator>().
+    }*/
 }

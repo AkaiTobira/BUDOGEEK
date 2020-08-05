@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
@@ -11,37 +12,46 @@ public class LevelManager : MonoBehaviour
     public GameObject[] level;
     public int[] maxScores;
     public int maxScore;
-    public Diploma diploma;
     public Countdown countdown;
+    public bool IsGameStarted = false;
+    //public DiplomasController diplomasController;
+    //public Countdown countdown;
     void Start()
     {
+        StartCoroutine(StartCounting());
+        StartCoroutine(ActivateOpponents());
         player = FindObjectOfType<PlayerController>();
         opponent = FindObjectOfType<OpponentController>();
-        diploma = FindObjectOfType<Diploma>();
-        countdown = FindObjectOfType<Countdown>();
+        //diplomasController = FindObjectOfType<DiplomasController>();
+        //countdown = FindObjectOfType<Countdown>();
     }
     void Update()
     {
         ChangeTechniqueButtonsDependingOnCurrentLevel();
     }
+    IEnumerator StartCounting()
+    {
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(countdown.CountingDown(3));
+    }
+    IEnumerator ActivateOpponents()
+    {
+        yield return new WaitForSeconds(7f);
+        IsGameStarted = true;
+    }
+    /*
     public void ShowDiplomaIfGainMaxScoreOfCurrentLevel()
     {
-        //diploma.diploma.SetActive(true);
-        //Time.timeScale = 0f;
         if (player.scorePoints == maxScores[currentLevel])
             StartCoroutine(ShowDiploma());
     }
     IEnumerator ShowDiploma()
     {
-        diploma.GetComponent<Animator>().SetTrigger("showDiploma");
+        diplomasController.diplomas[currentLevel].GetComponent<Animator>().SetTrigger("showDiploma");
         yield return new WaitForSeconds(3f);
-        countdown.GetComponent<Animator>().SetTrigger("startCountingDown");
-        countdown.CountingDown();
-        countdown.GetComponent<Text>().text = "3";
-        //yield return new WaitForSeconds(3f);
-        //diploma.diploma.SetActive(false);
-        //Time.timeScale = 1f;
+        StartCoroutine(countdown.CountingDown(3));
     }
+    */
     public void ChangeTechniqueButtonsDependingOnCurrentLevel()
     {
         foreach (var lvl in level)

@@ -16,7 +16,6 @@ public class ScoreSystem : MonoBehaviour
     {
         score += value;
         scoreText.text = "" + score;
-        FindObjectOfType<LevelManager>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
         FindObjectOfType<LevelManager>().CheckLevelProgress(score);
     }
 }

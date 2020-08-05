@@ -23,6 +23,22 @@ public class TechniqueButtonsController : MonoBehaviour
         }
         techNinjaButtons[tmp].SetActive(true);
     }
+    public void ChangeButtonColor(Button button)
+    {
+        var colors = button.colors;
+        colors.normalColor = button.colors.pressedColor;
+        button.colors = colors;
+
+        StartCoroutine(RestoreButtonColor(button));
+    }
+    IEnumerator RestoreButtonColor(Button button)
+    {
+        yield return new WaitForSeconds(1f);
+        var colors = button.colors;
+        colors.normalColor = button.colors.selectedColor;
+        button.colors = colors;
+
+    }
     public void ShowNameOfTechnique(int index)
     {
         HideOtherNames();
