@@ -33,7 +33,7 @@ public class TechniqueButtonsController : MonoBehaviour
     }
     IEnumerator RestoreButtonColor(Button button)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         var colors = button.colors;
         colors.normalColor = button.colors.selectedColor;
         button.colors = colors;

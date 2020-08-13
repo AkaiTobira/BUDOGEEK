@@ -13,7 +13,8 @@ public class LevelManager : MonoBehaviour
     public int[] maxScores;
     public int maxScore;
     public Countdown countdown;
-    public bool IsGameStarted = false;
+    public bool isGameStarted = false;
+    public bool isReadyToContinue = true;
     //public DiplomasController diplomasController;
     //public Countdown countdown;
     void Start()
@@ -31,13 +32,13 @@ public class LevelManager : MonoBehaviour
     }
     IEnumerator StartCounting()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         StartCoroutine(countdown.CountingDown(3));
     }
     IEnumerator ActivateOpponents()
     {
-        yield return new WaitForSeconds(7f);
-        IsGameStarted = true;
+        yield return new WaitForSeconds(5f);
+        isGameStarted = true;
     }
     /*
     public void ShowDiplomaIfGainMaxScoreOfCurrentLevel()
@@ -60,7 +61,7 @@ public class LevelManager : MonoBehaviour
     }
     public void CheckLevelProgress(int score)
     {
-        if (score > maxScores[currentLevel])
+        if (score == maxScores[currentLevel] && isReadyToContinue)
             currentLevel++;
     }    
 }

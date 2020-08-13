@@ -15,9 +15,9 @@ public class DiplomasController : MonoBehaviour
     }
     public void ShowDiplomaIfGainMaxScoreOfCurrentLevel()
     {
-        if (FindObjectOfType<ScoreSystem>().score == levelManager.maxScores[levelManager.currentLevel])
+        if (FindObjectOfType<ScoreSystem>().score == levelManager.maxScores[levelManager.currentLevel-1])
         {
-            FindObjectOfType<OpponentController>().IsAchieveMaxScore = true;
+            FindObjectOfType<OpponentController>().isAchieveMaxScore = true;
             diplomas[levelManager.currentLevel].GetComponent<Animator>().SetTrigger("showDiploma");
             StartCoroutine(StartCounting());
             StartCoroutine(ActivateOpponents());
@@ -31,6 +31,6 @@ public class DiplomasController : MonoBehaviour
     IEnumerator ActivateOpponents()
     {
         yield return new WaitForSeconds(7.5f);
-        FindObjectOfType<OpponentController>().IsAchieveMaxScore = false;
+        FindObjectOfType<OpponentController>().isAchieveMaxScore = false;
     }
 }

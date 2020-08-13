@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public TechniqueButtonsController techniqueButtons;
     public DefeatedMenu defeatMenu;
     public bool clickedButton = false;
+    public bool isReady = true;
+    private const float TIME_OF_REST = 0.8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,29 +84,35 @@ public class PlayerController : MonoBehaviour
     }
     public void ChangeTechniqueOnClick(int idTech)
     {
-        idTechnique = idTech;
-        playerAnimation.SetInteger("idTechnique", idTechnique);
-        playerAnimation.SetTrigger("technique");
-        //brown obi
-        if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 || 
-            idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
-        else if (idTechnique == 21 || idTechnique == 29)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
-        else if (idTechnique == 22 || idTechnique == 25 || idTechnique == 26 || idTechnique == 30)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
-        else if (idTechnique == 27 || idTechnique == 33)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
-        //black obi
-        else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 || 
-            idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
-        else if (idTechnique == 37 || idTechnique == 45)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
-        else if (idTechnique == 38 || idTechnique == 41 || idTechnique == 42 || idTechnique == 46)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
-        else if (idTechnique == 43 || idTechnique == 49)
-            techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
+        if (isReady)
+        {
+            idTechnique = idTech;
+            playerAnimation.SetInteger("idTechnique", idTechnique);
+            playerAnimation.SetTrigger("technique");
+            //brown obi
+            if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 ||
+                idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
+            else if (idTechnique == 21 || idTechnique == 29)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
+            else if (idTechnique == 22 || idTechnique == 25 || idTechnique == 26 || idTechnique == 30)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
+            else if (idTechnique == 27 || idTechnique == 33)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
+            //black obi
+            else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
+                idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
+            else if (idTechnique == 37 || idTechnique == 45)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
+            else if (idTechnique == 38 || idTechnique == 41 || idTechnique == 42 || idTechnique == 46)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
+            else if (idTechnique == 43 || idTechnique == 49)
+                techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
+
+            isReady = false;
+            StartCoroutine(RestAWhile(TIME_OF_REST));
+        }
     }
     public void GettingHit()
     {
@@ -160,9 +168,11 @@ public class PlayerController : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (IsInvalidState() || !IsValidDirection(collision) || !TechniqueMatcher.CheckIfTechniqueIsEffective(collision.tag, idTechnique))
+        if (IsInvalidState() || !IsValidDirection(collision) || !TechniqueMatcher.CheckIfTechniqueIsEffective(collision.tag, idTechnique) || isReady)
         {
             GettingHit();
+            isReady = false;
+            StartCoroutine(RestAWhile(TIME_OF_REST));
             //freeze for a while
             //StartCoroutine(WaitAWhile());
             //Time.timeScale = 0f;
@@ -175,11 +185,12 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<DiplomasController>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
         }
 
-    }/*
-    IEnumerator WaitAWhile()
+    }
+    IEnumerator RestAWhile(float delay)
     {
-        yield return new WaitForSeconds(1f);
-    }*/
+        yield return new WaitForSeconds(delay);
+        isReady = true;
+    }
     /*
     public void PressTechniqueButton(params Button[] techniqueButtons)
     {

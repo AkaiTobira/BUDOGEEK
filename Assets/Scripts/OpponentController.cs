@@ -12,11 +12,11 @@ public class OpponentController : MonoBehaviour
     public GameObject[] pillow;
     public GameObject[] plate;
     public LevelManager levelManager;
-    private const float TIME_TO_THROW_PILLOW = 0.25f;
+    private const float TIME_TO_THROW_PILLOW = 0.66f;
     private const float TIME_TO_THROW_PLATE = 0.5f;
     private float timerToSpawnEnemy = 0;
     private float[] TIME_SPAWN_DELAY = { 3f, 3f, 3f, 3f, 2.75f, 2.5f, 2.25f };
-    public bool IsAchieveMaxScore = false;
+    public bool isAchieveMaxScore = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class OpponentController : MonoBehaviour
     {
         //if (FindObjectOfType<ScoreSystem>().score != levelManager.maxScores[levelManager.currentLevel])
         timerToSpawnEnemy -= Time.deltaTime; 
-        if (timerToSpawnEnemy < 0 && !IsAchieveMaxScore && levelManager.IsGameStarted)
+        if (timerToSpawnEnemy < 0 && levelManager.isGameStarted && !isAchieveMaxScore)
         {
             SpawnRandomNinjaDependingOnCurrentLevel();
             timerToSpawnEnemy = TIME_SPAWN_DELAY[levelManager.currentLevel];
