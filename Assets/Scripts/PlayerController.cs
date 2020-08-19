@@ -21,7 +21,10 @@ public class PlayerController : MonoBehaviour
     public TechniqueButtonsController techniqueButtons;
     public DefeatedMenu defeatMenu;
     public bool clickedButton = false;
-    public bool isReady = true;
+    public bool isReadyToAttack = true;
+    public bool isReadyToCollision = true;
+    public int highscorePref;
+    //public bool doesPlayerGotHit = false;
     private const float TIME_OF_REST = 0.8f;
     // Start is called before the first frame update
     void Start()
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour
         scorePoints = FindObjectOfType<ScoreSystem>().score;
         InputControllers();
         ChangeLayerDefaultWeight();
+        levelManager.SaveLevelProgress();
     }
     public void ChangeLayerDefaultWeight()
     {
@@ -84,7 +88,7 @@ public class PlayerController : MonoBehaviour
     }
     public void ChangeTechniqueOnClick(int idTech)
     {
-        if (isReady)
+        if (isReadyToAttack)
         {
             idTechnique = idTech;
             playerAnimation.SetInteger("idTechnique", idTechnique);
@@ -110,12 +114,13 @@ public class PlayerController : MonoBehaviour
             else if (idTechnique == 43 || idTechnique == 49)
                 techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
 
-            isReady = false;
+            isReadyToAttack = false;
             StartCoroutine(RestAWhile(TIME_OF_REST));
         }
     }
     public void GettingHit()
     {
+        //if (doesPlayerGotHit)
         if (hitPoints > 0)
         {
             playerAnimation.SetTrigger("gettingHit");
@@ -136,10 +141,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         defeatMenu.PauseGameIfPlayerIsDefeted();
     }
-    public void GettingScorePoint()
-    {
-        scorePoints++;
-    }
     public void GettingJenCoin()
     {
         jenCoins++;
@@ -156,40 +157,41 @@ public class PlayerController : MonoBehaviour
     }
     private bool IsValidDirection(Collider2D collision)
     {
-        //if (IsInvalidState())
-        //{
-            float posX = collision.GetComponent<Transform>().position.x;
-            if (posX > 0 && facingRight)
-                return true;
-            if (posX < 0 && !facingRight)
-                return true;
-        //}
+        float posX = collision.GetComponent<Transform>().position.x;
+        if (posX > 0 && facingRight)
+            return true;
+        else if (posX < 0 && !facingRight)
+            return true;
         return false;
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (IsInvalidState() || !IsValidDirection(collision) || !TechniqueMatcher.CheckIfTechniqueIsEffective(collision.tag, idTechnique) || isReady)
+        if (isReadyToCollision)
         {
-            GettingHit();
-            isReady = false;
-            StartCoroutine(RestAWhile(TIME_OF_REST));
-            //freeze for a while
-            //StartCoroutine(WaitAWhile());
-            //Time.timeScale = 0f;
-            //StartCoroutine(WaitAWhile());
-            //Time.timeScale = 1f;
+            if (IsInvalidState() || !IsValidDirection(collision) || !TechniqueMatcher.CheckIfTechniqueIsEffective(collision.tag, idTechnique))
+            {
+                GettingHit();
+            }
+            else
+            {
+                FindObjectOfType<ScoreSystem>().AddToScore(1);
+                FindObjectOfType<DiplomasController>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
+            }
+            isReadyToCollision = false;
+            StartCoroutine(WaitAWhile(TIME_OF_REST));
         }
-        else
-        {
-            FindObjectOfType<ScoreSystem>().AddToScore(1);
-            FindObjectOfType<DiplomasController>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
-        }
-
     }
     IEnumerator RestAWhile(float delay)
     {
         yield return new WaitForSeconds(delay);
-        isReady = true;
+        if (!isReadyToAttack)
+            isReadyToAttack = true;
+    }
+    IEnumerator WaitAWhile(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (!isReadyToCollision)
+            isReadyToCollision = true;
     }
     /*
     public void PressTechniqueButton(params Button[] techniqueButtons)

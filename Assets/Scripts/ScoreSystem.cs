@@ -16,6 +16,6 @@ public class ScoreSystem : MonoBehaviour
     {
         score += value;
         scoreText.text = "" + score;
-        FindObjectOfType<LevelManager>().CheckLevelProgress(score);
+        //FindObjectOfType<LevelManager>().CheckLevelProgress(score);
     }
 }

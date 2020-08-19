@@ -8,19 +8,8 @@ public class LevelMenu : MonoBehaviour
 {
     public static LevelMenu levelMenu;
     public GameObject[] levelButtons;
-    public LevelManager levelManager;
     public int chosenLevel;
-    // Start is called before the first frame update
-    void Start()
-    {
-        levelManager = FindObjectOfType<LevelManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool? isLevelChosen = false;
     void Awake()
     {
         levelMenu = this;
@@ -29,13 +18,15 @@ public class LevelMenu : MonoBehaviour
     public void ChangeLevelOnClick(int level)
     {
         chosenLevel = level;
+        isLevelChosen = true;
         StartCoroutine(PlayChosenLevel());
+        if (Time.timeScale == 0f)
+            Time.timeScale = 1f;
     }
 
     IEnumerator PlayChosenLevel()
     {
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     }
 }
