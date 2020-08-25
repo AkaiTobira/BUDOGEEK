@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class TutorialMenu : MonoBehaviour
 {
     public LevelManager levelManager;
-    //public static bool IsGamePaused = false;
-    public void PauseGameOnClick(GameObject pauseMenu)
+    public GameObject tutorialMenu;
+    public void PauseGameIfPlayerHasFinishedTutorial()
     {
         levelManager.SaveLevelProgress();
-        pauseMenu.SetActive(true);
+        if (PlayerPrefs.GetInt("Tutorial") == 0)
+            PlayerPrefs.SetInt("Tutorial", 1);
+        tutorialMenu.SetActive(true);
         Time.timeScale = 0f;
-        //IsGamePaused = true;
     }
-    public void ResumeGameOnClick(GameObject pauseMenu)
+    public void ContinueGameOnClick()
     {
-        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        //IsGamePaused = false;
+        PlayerPrefs.SetInt("CurrentLevel", 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void GoToMainMenu()
     {
-        //IsGamePaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     public void QuitGame()
     {
-        //IsGamePaused = false;
         Application.Quit();
     }
 }

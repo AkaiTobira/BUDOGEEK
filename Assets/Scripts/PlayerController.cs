@@ -12,13 +12,14 @@ public class PlayerController : MonoBehaviour
     private new Rigidbody2D rigidbody;
     public int hitPoints;
     public int scorePoints;
-    public int jenCoins;
+    //public int yenCoins;
     public int idTechnique;//?
     private bool facingRight = true;
     public Text scoreText;
     public HealthSystem health;
     public LevelManager levelManager;
-    public TechniqueButtonsController techniqueButtons;
+    public TechniqueButtonsController techniqueButtons5;
+    public TechniqueButtonsController techniqueButtons6;
     public DefeatedMenu defeatMenu;
     public bool clickedButton = false;
     public bool isReadyToAttack = true;
@@ -36,15 +37,13 @@ public class PlayerController : MonoBehaviour
         playerAnimation = GetComponent<Animator>();
         hitPoints = 2;
         scorePoints = FindObjectOfType<ScoreSystem>().score;
-        jenCoins = 0;
+        ChangeLayerDefaultWeight();
     }
     // Update is called once per frame
     void Update()
     {
         scorePoints = FindObjectOfType<ScoreSystem>().score;
         InputControllers();
-        ChangeLayerDefaultWeight();
-        levelManager.SaveLevelProgress();
     }
     public void ChangeLayerDefaultWeight()
     {
@@ -93,29 +92,104 @@ public class PlayerController : MonoBehaviour
             idTechnique = idTech;
             playerAnimation.SetInteger("idTechnique", idTechnique);
             playerAnimation.SetTrigger("technique");
+            TechniqueChanger();
+            isReadyToAttack = false;
+            StartCoroutine(RestAWhile(TIME_OF_REST));
+        }
+    }
+    public void TechniqueChanger()
+    {
+        if (levelManager.currentLevel == 5)
+        {
+            //RIGHT SIDE
             //brown obi
             if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 ||
-                idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
+            idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_R);
             else if (idTechnique == 21 || idTechnique == 29)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_R);
             else if (idTechnique == 22 || idTechnique == 25 || idTechnique == 26 || idTechnique == 30)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_R);
             else if (idTechnique == 27 || idTechnique == 33)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_R);
             //black obi
             else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
                 idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.greenNinjaButtons);
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_R);
             else if (idTechnique == 37 || idTechnique == 45)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.blueNinjaButtons);
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_R);
             else if (idTechnique == 38 || idTechnique == 41 || idTechnique == 42 || idTechnique == 46)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.purpleNinjaButtons);
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_R);
             else if (idTechnique == 43 || idTechnique == 49)
-                techniqueButtons.ChangeTechniqueButton(techniqueButtons.orangeNinjaButtons);
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_R);
+            //LEFT SIDE
+            //brown obi
+            else if (idTechnique == 190 || idTechnique == 200 || idTechnique == 230 || idTechnique == 240 ||
+                idTechnique == 280 || idTechnique == 310 || idTechnique == 320 || idTechnique == 340)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_L);
+            else if (idTechnique == 210 || idTechnique == 290)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_L);
+            else if (idTechnique == 220 || idTechnique == 250 || idTechnique == 260 || idTechnique == 300)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_L);
+            else if (idTechnique == 270 || idTechnique == 330)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_L);
+            //black obi
+            else if (idTechnique == 350 || idTechnique == 360 || idTechnique == 390 || idTechnique == 400 ||
+                idTechnique == 440 || idTechnique == 470 || idTechnique == 480 || idTechnique == 500)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_L);
+            else if (idTechnique == 370 || idTechnique == 450)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_L);
+            else if (idTechnique == 380 || idTechnique == 410 || idTechnique == 420 || idTechnique == 460)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_L);
+            else if (idTechnique == 430 || idTechnique == 490)
+                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_L);
 
-            isReadyToAttack = false;
-            StartCoroutine(RestAWhile(TIME_OF_REST));
+        }
+        else if (levelManager.currentLevel == 6)
+        {
+            //RIGHT SIDE
+            //brown obi
+            if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 ||
+            idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_R);
+            else if (idTechnique == 21 || idTechnique == 29)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_R);
+            else if (idTechnique == 22 || idTechnique == 25 || idTechnique == 26 || idTechnique == 30)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_R);
+            else if (idTechnique == 27 || idTechnique == 33)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_R);
+            //black obi
+            else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
+                idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_R);
+            else if (idTechnique == 37 || idTechnique == 45)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_R);
+            else if (idTechnique == 38 || idTechnique == 41 || idTechnique == 42 || idTechnique == 46)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_R);
+            else if (idTechnique == 43 || idTechnique == 49)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_R);
+            //LEFT SIDE
+            //brown obi
+            else if (idTechnique == 190 || idTechnique == 200 || idTechnique == 230 || idTechnique == 240 ||
+                idTechnique == 280 || idTechnique == 310 || idTechnique == 320 || idTechnique == 340)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_L);
+            else if (idTechnique == 210 || idTechnique == 290)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_L);
+            else if (idTechnique == 220 || idTechnique == 250 || idTechnique == 260 || idTechnique == 300)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_L);
+            else if (idTechnique == 270 || idTechnique == 330)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_L);
+            //black obi
+            else if (idTechnique == 350 || idTechnique == 360 || idTechnique == 390 || idTechnique == 400 ||
+                idTechnique == 440 || idTechnique == 470 || idTechnique == 480 || idTechnique == 500)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_L);
+            else if (idTechnique == 370 || idTechnique == 450)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_L);
+            else if (idTechnique == 380 || idTechnique == 410 || idTechnique == 420 || idTechnique == 460)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_L);
+            else if (idTechnique == 430 || idTechnique == 490)
+                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_L);
+
         }
     }
     public void GettingHit()
@@ -140,10 +214,6 @@ public class PlayerController : MonoBehaviour
         defeatMenu.scorePoints = scorePoints;
         yield return new WaitForSeconds(1f);
         defeatMenu.PauseGameIfPlayerIsDefeted();
-    }
-    public void GettingJenCoin()
-    {
-        jenCoins++;
     }
     private bool IsInvalidState()
     {
@@ -176,6 +246,8 @@ public class PlayerController : MonoBehaviour
             {
                 FindObjectOfType<ScoreSystem>().AddToScore(1);
                 FindObjectOfType<DiplomasController>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
+                FindObjectOfType<YenSystem>().DroppingYenSystem();
+                levelManager.EndTutorial();
             }
             isReadyToCollision = false;
             StartCoroutine(WaitAWhile(TIME_OF_REST));

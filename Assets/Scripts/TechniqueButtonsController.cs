@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class TechniqueButtonsController : MonoBehaviour
 {
-    public GameObject[] greenNinjaButtons;
-    public GameObject[] blueNinjaButtons;
-    public GameObject[] purpleNinjaButtons;
-    public GameObject[] orangeNinjaButtons;
+    public GameObject[] greenNinjaButtons_L;
+    public GameObject[] blueNinjaButtons_L;
+    public GameObject[] purpleNinjaButtons_L;
+    public GameObject[] orangeNinjaButtons_L;
+    public GameObject[] greenNinjaButtons_R;
+    public GameObject[] blueNinjaButtons_R;
+    public GameObject[] purpleNinjaButtons_R;
+    public GameObject[] orangeNinjaButtons_R;
     public Button[] firstButtons;
     public Button[] secondButtons;
     public Button[] thirdButtons;
@@ -25,19 +29,19 @@ public class TechniqueButtonsController : MonoBehaviour
     }
     public void ChangeButtonColor(Button button)
     {
-        var colors = button.colors;
-        colors.normalColor = button.colors.pressedColor;
-        button.colors = colors;
-
+        //var colors = button.colors;
+        button.interactable = false;
+        //colors.normalColor = button.colors.pressedColor;
+        //button.colors = colors;
         StartCoroutine(RestoreButtonColor(button));
     }
     IEnumerator RestoreButtonColor(Button button)
     {
         yield return new WaitForSeconds(0.8f);
-        var colors = button.colors;
-        colors.normalColor = button.colors.selectedColor;
-        button.colors = colors;
-
+        //var colors = button.colors;
+        //colors.normalColor = button.colors.selectedColor;
+        //button.colors = colors;
+        button.interactable = true;
     }
     public void ShowNameOfTechnique(int index)
     {

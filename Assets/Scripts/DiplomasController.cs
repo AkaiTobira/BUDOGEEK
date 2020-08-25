@@ -17,6 +17,7 @@ public class DiplomasController : MonoBehaviour
     {
         if (FindObjectOfType<ScoreSystem>().score == levelManager.maxScores[levelManager.currentLevel])
         {
+            levelManager.SaveLevelProgress();
             FindObjectOfType<OpponentController>().doesAchieveMaxScore = true;
             diplomas[levelManager.currentLevel].GetComponent<Animator>().SetTrigger("showDiploma");
             StartCoroutine(StartCounting());

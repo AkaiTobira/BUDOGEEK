@@ -7,13 +7,15 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class DefeatedMenu : MonoBehaviour
 {
+    public LevelManager levelManager;
     public Text scoreText;
     public int scorePoints;
     public PlayerController player;
     public GameObject defeatMenu;
-    ScoreSystem scoreSystem;
+    public ScoreSystem scoreSystem;
     public void PauseGameIfPlayerIsDefeted()
     {
+        levelManager.SaveLevelProgress();
         defeatMenu.SetActive(true);
         Time.timeScale = 0f;
     }

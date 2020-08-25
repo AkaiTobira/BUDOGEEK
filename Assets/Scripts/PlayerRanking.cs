@@ -14,7 +14,7 @@ public class PlayerRanking : MonoBehaviour
     {
         for (int i = 0; i < totalScoresText.Length; i++)
         {
-            totalScoresText[i].text += "" + PlayerPrefs.GetInt($"Score{i}");
+            totalScoresText[i].text += "" + PlayerPrefs.GetInt($"Score{i+1}");
         }
     }
 }

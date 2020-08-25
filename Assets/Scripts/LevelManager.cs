@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,8 +16,10 @@ public class LevelManager : MonoBehaviour
     public Countdown countdown;
     public bool isGameStarted = false;
     public bool isReadyToContinue = true;
-    //public DiplomasController diplomasController;
-    //public Countdown countdown;
+    public bool isReady = false;
+    public GameObject tutorialLayer;
+    public TutorialMenu tutorialMenu;
+
     void Start()
     {
         StartCoroutine(StartCounting());
@@ -24,61 +27,30 @@ public class LevelManager : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         opponent = FindObjectOfType<OpponentController>();
         DefineCurrentLevel();
+        ChangeTechniqueButtonsDependingOnCurrentLevel();
+        /*
+        if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
+            StartTutorial();*/
     }
     void Update()
     {
-        ChangeTechniqueButtonsDependingOnCurrentLevel();
-        EndTutorial();
     }
     public void DefineCurrentLevel()
     {
-        DefineCurrentLevelDependingOnChoice();
-        //DefineCurrentLevelDependingOnProgress();
+        Debug.Log(PlayerPrefs.GetInt("CurrentLevel"));
+        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+        PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
     }
-    public void DefineCurrentLevelDependingOnProgress()//if PlayButton is clicked
-    {
-        switch (PlayerPrefs.GetInt("LastLevelPlayed"))
-        {
-            case 0:
-                currentLevel = 1;
-                PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
-                break;
-            case 1:
-                currentLevel = 2;
-                PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
-                break;
-            case 2:
-                currentLevel = 3;
-                PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
-                break;
-            case 3:
-                currentLevel = 4;
-                PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
-                break;
-            case 4:
-                currentLevel = 5;
-                PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
-                break;
-            case 5:
-                currentLevel = 6;
-                PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
-                break;
-            case 6:
-                currentLevel = 6;
-                PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
-                break;
-            default:
-                break;
-        }
-    }
+    /*
     public void DefineCurrentLevelDependingOnChoice()//if level is chosen from LevelMenu's buttons list
     {
-        if (LevelMenu.levelMenu.isLevelChosen != null)
+        Debug.Log(LevelMenu.levelMenu);
+        if (LevelMenu.levelMenu.isLevelChosen)
         {
             currentLevel = LevelMenu.levelMenu.chosenLevel;
             LevelMenu.levelMenu.isLevelChosen = false;
         }
-    }
+    }*/
     IEnumerator StartCounting()
     {
         yield return new WaitForSeconds(1f);
@@ -100,6 +72,7 @@ public class LevelManager : MonoBehaviour
         switch (currentLevel)
         {
             case 0:
+                PlayerPrefs.SetInt("Score0", FindObjectOfType<ScoreSystem>().score);
                 break;
             case 1:
                 PlayerPrefs.SetInt("Score1", FindObjectOfType<ScoreSystem>().score);
@@ -123,15 +96,57 @@ public class LevelManager : MonoBehaviour
                 break;
         }
     }
+    public void StartTutorial()
+    {
+        ShowIntroducingInformation();
+    }
+    public void ShowIntroducingInformation()
+    {
+        while (!isReady)
+        {
+            tutorialLayer.GetComponent<Animator>().SetTrigger("Welcome");
+            if (Input.touches.Length != 0)
+            {
+                isReady = true;
+            }
+        }
+        isReady = false;
+        while (!isReady)
+        {
+            tutorialLayer.GetComponent<Animator>().SetTrigger("ShowHUD");
+            if (Input.touches.Length != 0)
+            {
+                isReady = true;
+            }
+        }
+        isReady = false;
+        while (!isReady)
+        {
+            tutorialLayer.GetComponent<Animator>().SetTrigger("ShowBattle");
+            if (Input.touches.Length != 0)
+            {
+                isReady = true;
+            }
+        }
+        isReady = false;
+    }
+    IEnumerator WaitUntilBeingReadyToContinue()
+    {
+        yield return new WaitForSeconds(2f);
+    }
     public void EndTutorial()
     {
         if (currentLevel == 0 && FindObjectOfType<ScoreSystem>().score == maxScores[currentLevel])
+        {
             StartCoroutine(EndingTutorial());
+        }
     }
     IEnumerator EndingTutorial()
     {
+        SaveLevelProgress();
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        tutorialMenu.PauseGameIfPlayerHasFinishedTutorial();
     }
 
     /*
