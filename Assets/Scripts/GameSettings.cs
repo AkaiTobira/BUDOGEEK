@@ -8,21 +8,15 @@ public class GameSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("GameSettings") == 1)
-            PlayerPrefs.SetInt("GameSettings", 1);
-        else
-            PlayerPrefs.SetInt("GameSettings", 0);
-        if (PlayerPrefs.GetInt("GameSettings") == 0)
-        {
-            SetScoreThresholds();
-            SetTmpScores();
-            SetScores();
-            SetLevels();
-            PlayerPrefs.SetInt("Currency", 0);
-            PlayerPrefs.SetInt("Tutorial", 0);
-            //isGameSet = true;
-            PlayerPrefs.SetInt("GameSettings", 1);
-        }
+        if (PlayerPrefs.GetInt("GameSettings") == 1) return;
+        SetScoreThresholds();
+        SetTmpScores();
+        SetScores();
+        SetLevels();
+        PlayerPrefs.SetInt("Currency", 0);
+        PlayerPrefs.SetInt("Tutorial", 0);
+        PlayerPrefs.SetInt("GameSettings", 1);
+        PlayerPrefs.Save();
     }
 
     // Update is called once per frame

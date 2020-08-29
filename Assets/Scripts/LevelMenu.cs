@@ -10,19 +10,25 @@ public class LevelMenu : MonoBehaviour
     public Button[] levelButtons;
     public int chosenLevel;
     public bool isLevelChosen = false;
+    /*
     public GameObject scrollBar;
     float scrollPosition = 0;
     float[] position;
+    public HorizontalLayoutGroup horizontalLayoutGroup;
+    */
     void Start()
     {
         FillButtonsText();
         SavePlayerProgress();
         UnlockButtons();
     }
+    /*
     void Update()
     {
+        horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - 200) / 2;
+        horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - 200) / 2;
         StickToButtonDuringSwiping();
-    }
+    }*/
     /*
     public void LockButtons()
     {
@@ -77,7 +83,7 @@ public class LevelMenu : MonoBehaviour
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    /*
     public void StickToButtonDuringSwiping()//Update
     {
         position = new float[transform.childCount];
@@ -102,4 +108,5 @@ public class LevelMenu : MonoBehaviour
             }
                     
     }
+    */
 }

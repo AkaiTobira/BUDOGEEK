@@ -15,7 +15,7 @@ public class OpponentController : MonoBehaviour
     private const float TIME_TO_THROW_PILLOW = 0.66f;
     private const float TIME_TO_THROW_PLATE = 0.5f;
     private float timerToSpawnEnemy = 0;
-    private float[] TIME_SPAWN_DELAY = { 3f, 3f, 3f, 3f, 2.75f, 2.5f, 2.25f };
+    private float[] TIME_SPAWN_DELAY = { 5f, 4f, 3f, 3.5f, 2.75f, 2.5f, 2.25f };
     public bool doesAchieveMaxScore = false;
 
     // Start is called before the first frame update

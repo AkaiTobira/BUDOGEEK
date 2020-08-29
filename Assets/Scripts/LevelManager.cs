@@ -37,7 +37,6 @@ public class LevelManager : MonoBehaviour
     }
     public void DefineCurrentLevel()
     {
-        Debug.Log(PlayerPrefs.GetInt("CurrentLevel"));
         currentLevel = PlayerPrefs.GetInt("CurrentLevel");
         PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
     }
