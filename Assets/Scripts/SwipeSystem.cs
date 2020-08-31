@@ -13,18 +13,24 @@ public class SwipeSystem : MonoBehaviour
     public HorizontalLayoutGroup horizontalLayoutGroup;
     public GameObject backButton;
     public GameObject techButton;
+    public GameObject stanceButton;
     public Sprite[] techSprites;
+    public Sprite[] stanceSprites;
     public Animator playerAnimator;
+    public Animator stanceAnimator;
     public string techName;
+    public string stanceName;
     private bool IsCenterPosition(int i)
     {
         return scrollPosition < currentPositionsOfScrollItems[i] + (distance / 2) && scrollPosition > currentPositionsOfScrollItems[i] - (distance / 2);
     }
     void Start()
     {
+        if (Time.timeScale == 0f)
+            Time.timeScale = 1f;
         SetProperPaddingDependingOnResolution();
-        if (backButton != null && techButton != null)
-            SetPositionOfButtons();
+        //if ((backButton != null && techButton != null) || (backButton != null && stanceButton != null))
+        //    SetPositionOfButtons();
         currentPositionsOfScrollItems = new float[transform.childCount];
         distance = 1f / (currentPositionsOfScrollItems.Length - 1f);
     }
@@ -91,6 +97,31 @@ public class SwipeSystem : MonoBehaviour
         }
         playerAnimator.SetTrigger("technique");
     }
+    public void PlayAnimOfStanceOnClick()
+    {
+        switch (stanceName)
+        {
+            case "heiko_(joi)_button":
+                stanceAnimator.SetInteger("idStance", 1);
+                break;
+            case "kibadachi_button":
+                stanceAnimator.SetInteger("idStance", 2);
+                break;
+            case "kokuzudachi_button":
+                stanceAnimator.SetInteger("idStance", 3);
+                break;
+            case "musubidachi_button":
+                stanceAnimator.SetInteger("idStance", 4);
+                break;
+            case "zenkuzudachi_button":
+                stanceAnimator.SetInteger("idStance", 5);
+                break;
+            default:
+                break;
+        }
+        stanceAnimator.SetTrigger("stance");
+    }
+    /*
     private void SetPositionOfButtons()
     {
         Vector3 v3back = backButton.transform.localPosition;
@@ -108,30 +139,12 @@ public class SwipeSystem : MonoBehaviour
         backButton.transform.localPosition = v3back;
         techButton.transform.localPosition = v3tech;
     }
+    */
     private void SetProperPaddingDependingOnResolution()
     {
-        if (Screen.width / Screen.height >= 2)
-        {
-            if (Screen.width != 2960)
-            {
-                horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - 160) / 2;
-                horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - 160) / 2;
-                horizontalLayoutGroup.spacing = 320;
-            }
-            else
-            {
-                horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - 100) / 2;
-                horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - 100) / 2;
-                horizontalLayoutGroup.spacing = 340;
-            }
-        }
-        else
-        {
-            horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - 400) / 2;
-            horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - 400) / 2;
-            horizontalLayoutGroup.spacing = 340;
-        }
-
+        horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - 400) / 2;
+        horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - 400) / 2;
+        horizontalLayoutGroup.spacing = 340;
     }
     private void ResetCurrentPositionsOfScrollItems()
     {
@@ -163,6 +176,11 @@ public class SwipeSystem : MonoBehaviour
                     techButton.GetComponent<Image>().sprite = techSprites[i];
                     techName = techSprites[i].name;
                 }
+                else if (backButton != null && stanceButton != null)
+                {
+                    stanceButton.GetComponent<Image>().sprite = stanceSprites[i];
+                    stanceName = stanceSprites[i].name;
+                }
                 ScaleNotActiveScrollItems(i);
             }
     }
@@ -173,7 +191,6 @@ public class SwipeSystem : MonoBehaviour
             if (j != currentActiveScrollItem)
             {
                 transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.6f, 0.6f), 0.1f);
-                //add switching buttons
             }
         }
     }

@@ -7,6 +7,7 @@ public class YenSystem : MonoBehaviour
 {
     public int yen = 0;
     public Text yenText;
+    public Animator yenAnimator;
     void Start()
     {
         yen = PlayerPrefs.GetInt("Currency");
@@ -20,13 +21,17 @@ public class YenSystem : MonoBehaviour
     }
     public void DropYen(int value)
     {
-        GetComponent<Animator>().SetTrigger("DropYen");
+        yenAnimator.SetTrigger("DropYen");
         StartCoroutine(WaitBeforeAddToWallet(value));
     }
     IEnumerator WaitBeforeAddToWallet(int value)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         AddToWallet(value);
+    }
+    public void SaveYen()
+    {
+        PlayerPrefs.SetInt("Currency", yen);
     }
     public void DroppingYenSystem()
     {

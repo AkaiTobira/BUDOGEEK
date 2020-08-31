@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour
     public bool isReady = false;
     public GameObject tutorialLayer;
     public TutorialMenu tutorialMenu;
+    public YenSystem yenSystem;
 
     void Start()
     {
@@ -94,6 +95,7 @@ public class LevelManager : MonoBehaviour
             default:
                 break;
         }
+        yenSystem.SaveYen();
     }
     public void StartTutorial()
     {
