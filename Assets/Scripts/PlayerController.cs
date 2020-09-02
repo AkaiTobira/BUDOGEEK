@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public int scorePoints;
     //public int yenCoins;
     public int idTechnique;//?
-    private bool facingRight = true;
+    public bool facingRight = true;
     public Text scoreText;
     public HealthSystem health;
     public LevelManager levelManager;
@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public int highscorePref;
     //public bool doesPlayerGotHit = false;
     private const float TIME_OF_REST = 0.8f;
+    public MaxScoreMenu maxScoreMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +100,31 @@ public class PlayerController : MonoBehaviour
     }
     public void TechniqueChanger()
     {
+        switch (levelManager.currentLevel)
+        {
+            case 0:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 0"), 1f);
+                break;
+            case 1:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 1"), 1f);
+                break;
+            case 2:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 2"), 1f);
+                break;
+            case 3:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 3"), 1f);
+                break;
+            case 4:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 4"), 1f);
+                break;
+            case 5:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 5"), 1f);
+                break;
+            case 6:
+                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 6"), 1f);
+                break;
+        }
+        //zamienić na switch
         if (levelManager.currentLevel == 5)
         {
             //RIGHT SIDE
@@ -113,6 +139,7 @@ public class PlayerController : MonoBehaviour
             else if (idTechnique == 27 || idTechnique == 33)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_R);
             //black obi
+            /*
             else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
                 idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_R);
@@ -122,6 +149,7 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_R);
             else if (idTechnique == 43 || idTechnique == 49)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_R);
+            */
             //LEFT SIDE
             //brown obi
             else if (idTechnique == 190 || idTechnique == 200 || idTechnique == 230 || idTechnique == 240 ||
@@ -134,6 +162,7 @@ public class PlayerController : MonoBehaviour
             else if (idTechnique == 270 || idTechnique == 330)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_L);
             //black obi
+            /*
             else if (idTechnique == 350 || idTechnique == 360 || idTechnique == 390 || idTechnique == 400 ||
                 idTechnique == 440 || idTechnique == 470 || idTechnique == 480 || idTechnique == 500)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_L);
@@ -143,12 +172,14 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_L);
             else if (idTechnique == 430 || idTechnique == 490)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_L);
+            */
 
         }
         else if (levelManager.currentLevel == 6)
         {
             //RIGHT SIDE
             //brown obi
+            /*
             if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 ||
             idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_R);
@@ -158,8 +189,9 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_R);
             else if (idTechnique == 27 || idTechnique == 33)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_R);
+            */
             //black obi
-            else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
+            if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
                 idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_R);
             else if (idTechnique == 37 || idTechnique == 45)
@@ -170,6 +202,7 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_R);
             //LEFT SIDE
             //brown obi
+            /*
             else if (idTechnique == 190 || idTechnique == 200 || idTechnique == 230 || idTechnique == 240 ||
                 idTechnique == 280 || idTechnique == 310 || idTechnique == 320 || idTechnique == 340)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_L);
@@ -179,6 +212,7 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_L);
             else if (idTechnique == 270 || idTechnique == 330)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_L);
+            */
             //black obi
             else if (idTechnique == 350 || idTechnique == 360 || idTechnique == 390 || idTechnique == 400 ||
                 idTechnique == 440 || idTechnique == 470 || idTechnique == 480 || idTechnique == 500)
@@ -246,6 +280,7 @@ public class PlayerController : MonoBehaviour
             {
                 FindObjectOfType<ScoreSystem>().AddToScore(1);
                 FindObjectOfType<DiplomasController>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
+                maxScoreMenu.PauseGameIfPlayerAchiveMaxScore();
                 FindObjectOfType<YenSystem>().DroppingYenSystem();
                 levelManager.EndTutorial();
             }

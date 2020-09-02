@@ -18,6 +18,7 @@ public class SwipeSystem : MonoBehaviour
     public Sprite[] stanceSprites;
     public Animator playerAnimator;
     public Animator stanceAnimator;
+    public Animator beltOrKimonoAnimator;
     public string techName;
     public string stanceName;
     private bool IsCenterPosition(int i)
@@ -120,6 +121,10 @@ public class SwipeSystem : MonoBehaviour
                 break;
         }
         stanceAnimator.SetTrigger("stance");
+    }
+    public void PlayAnimOfBeltOrKimonoOnClick()
+    {
+        beltOrKimonoAnimator.SetTrigger("startGlossaryAnim");
     }
     /*
     private void SetPositionOfButtons()

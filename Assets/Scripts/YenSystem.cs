@@ -8,6 +8,9 @@ public class YenSystem : MonoBehaviour
     public int yen = 0;
     public Text yenText;
     public Animator yenAnimator;
+    public PlayerController player;
+    public Animator leftKiay;
+    public Animator rightKiay;
     void Start()
     {
         yen = PlayerPrefs.GetInt("Currency");
@@ -43,35 +46,64 @@ public class YenSystem : MonoBehaviour
             case 1:
                 tmp = Random.Range(0, 10);
                 if (tmp == 1)
+                {
                     DropYen(1);
+                    ShowKiay();
+                }
                 break;
             case 2:
                 tmp = Random.Range(0, 9);
                 if (tmp == 1)
+                {
                     DropYen(1);
+                    ShowKiay();
+                }
                 break;
             case 3:
                 tmp = Random.Range(0, 8);
                 if (tmp == 1)
+                {
                     DropYen(2);
+                    ShowKiay();
+                }
                 break;
             case 4:
                 tmp = Random.Range(0, 7);
                 if (tmp == 1)
+                {
                     DropYen(2);
+                    ShowKiay();
+                }
                 break;
             case 5:
                 tmp = Random.Range(0, 6);
                 if (tmp == 1)
+                {
                     DropYen(2);
+                    ShowKiay();
+                }
                 break;
             case 6:
                 tmp = Random.Range(0, 5);
                 if (tmp == 1)
+                {
                     DropYen(3);
+                    ShowKiay();
+                }
                 break;
             default:
                 break;
+        }
+    }
+    public void ShowKiay()
+    {
+        if (player.facingRight)
+        {
+            rightKiay.SetTrigger("RightKiay");
+        }
+        else if (!player.facingRight)
+        {
+            leftKiay.SetTrigger("LeftKiay");
         }
     }
 }
