@@ -37,6 +37,7 @@ public class TechniqueButtonsController : MonoBehaviour
     }
     public void ChangeTechniqueButton2(string side)
     {
+        //Czy OnClick wywoluje sie jednoczesnie? playerController.idTechnique zmienia sie OnClick jak i ChangeTechniqueButton2 jest OnClick czy to jest przyczyna problemu?
         if (TechniqueMatcher.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, gameObject.tag, playerController.idTechnique))
         {
             gameObject.SetActive(false);
