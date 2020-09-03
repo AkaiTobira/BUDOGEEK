@@ -103,32 +103,33 @@ public class PlayerController : MonoBehaviour
         switch (levelManager.currentLevel)
         {
             case 0:
-                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 0"), 1f);
                 break;
             case 1:
-                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 1"), 1f);
+                ChangeTechniqueButtonsOfLevel1();
                 break;
             case 2:
-                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 2"), 1f);
+                ChangeTechniqueButtonsOfLevel2();
                 break;
             case 3:
-                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 3"), 1f);
+                ChangeTechniqueButtonsOfLevel3();
                 break;
             case 4:
-                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 4"), 1f);
+                ChangeTechniqueButtonsOfLevel4();
                 break;
             case 5:
-                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 5"), 1f);
+                ChangeTechniqueButtonsOfLevel5();
                 break;
             case 6:
-                playerAnimation.SetLayerWeight(playerAnimation.GetLayerIndex("Level 6"), 1f);
+                ChangeTechniqueButtonsOfLevel6();
+                break;
+            default:
                 break;
         }
         //zamienić na switch
         if (levelManager.currentLevel == 5)
         {
-            //RIGHT SIDE
             //brown obi
+            //RIGHT SIDE
             if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 ||
             idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_R);
@@ -138,20 +139,7 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_R);
             else if (idTechnique == 27 || idTechnique == 33)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_R);
-            //black obi
-            /*
-            else if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
-                idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_R);
-            else if (idTechnique == 37 || idTechnique == 45)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_R);
-            else if (idTechnique == 38 || idTechnique == 41 || idTechnique == 42 || idTechnique == 46)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_R);
-            else if (idTechnique == 43 || idTechnique == 49)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_R);
-            */
             //LEFT SIDE
-            //brown obi
             else if (idTechnique == 190 || idTechnique == 200 || idTechnique == 230 || idTechnique == 240 ||
                 idTechnique == 280 || idTechnique == 310 || idTechnique == 320 || idTechnique == 340)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_L);
@@ -161,36 +149,11 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_L);
             else if (idTechnique == 270 || idTechnique == 330)
                 techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_L);
-            //black obi
-            /*
-            else if (idTechnique == 350 || idTechnique == 360 || idTechnique == 390 || idTechnique == 400 ||
-                idTechnique == 440 || idTechnique == 470 || idTechnique == 480 || idTechnique == 500)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_L);
-            else if (idTechnique == 370 || idTechnique == 450)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_L);
-            else if (idTechnique == 380 || idTechnique == 410 || idTechnique == 420 || idTechnique == 460)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_L);
-            else if (idTechnique == 430 || idTechnique == 490)
-                techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_L);
-            */
-
         }
         else if (levelManager.currentLevel == 6)
         {
-            //RIGHT SIDE
-            //brown obi
-            /*
-            if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 ||
-            idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_R);
-            else if (idTechnique == 21 || idTechnique == 29)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_R);
-            else if (idTechnique == 22 || idTechnique == 25 || idTechnique == 26 || idTechnique == 30)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_R);
-            else if (idTechnique == 27 || idTechnique == 33)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_R);
-            */
             //black obi
+            //RIGHT SIDE
             if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
                 idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_R);
@@ -201,19 +164,6 @@ public class PlayerController : MonoBehaviour
             else if (idTechnique == 43 || idTechnique == 49)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_R);
             //LEFT SIDE
-            //brown obi
-            /*
-            else if (idTechnique == 190 || idTechnique == 200 || idTechnique == 230 || idTechnique == 240 ||
-                idTechnique == 280 || idTechnique == 310 || idTechnique == 320 || idTechnique == 340)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_L);
-            else if (idTechnique == 210 || idTechnique == 290)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_L);
-            else if (idTechnique == 220 || idTechnique == 250 || idTechnique == 260 || idTechnique == 300)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_L);
-            else if (idTechnique == 270 || idTechnique == 330)
-                techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_L);
-            */
-            //black obi
             else if (idTechnique == 350 || idTechnique == 360 || idTechnique == 390 || idTechnique == 400 ||
                 idTechnique == 440 || idTechnique == 470 || idTechnique == 480 || idTechnique == 500)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_L);
@@ -223,9 +173,77 @@ public class PlayerController : MonoBehaviour
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_L);
             else if (idTechnique == 430 || idTechnique == 490)
                 techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_L);
-
         }
     }
+    public void ChangeTechniqueButtonsOfLevel1()
+    {
+
+    }
+    public void ChangeTechniqueButtonsOfLevel2()
+    {
+
+    }
+    public void ChangeTechniqueButtonsOfLevel3()
+    {
+
+    }
+    public void ChangeTechniqueButtonsOfLevel4()
+    {
+
+    }
+    public void ChangeTechniqueButtonsOfLevel5()
+    {
+        //brown obi
+        //RIGHT SIDE
+        if (idTechnique == 19 || idTechnique == 20 || idTechnique == 23 || idTechnique == 24 ||
+        idTechnique == 28 || idTechnique == 31 || idTechnique == 32 || idTechnique == 34)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_R);
+        else if (idTechnique == 21 || idTechnique == 29)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_R);
+        else if (idTechnique == 22 || idTechnique == 25 || idTechnique == 26 || idTechnique == 30)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_R);
+        else if (idTechnique == 27 || idTechnique == 33)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_R);
+        //LEFT SIDE
+        else if (idTechnique == 190 || idTechnique == 200 || idTechnique == 230 || idTechnique == 240 ||
+            idTechnique == 280 || idTechnique == 310 || idTechnique == 320 || idTechnique == 340)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.greenNinjaButtons_L);
+        else if (idTechnique == 210 || idTechnique == 290)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.blueNinjaButtons_L);
+        else if (idTechnique == 220 || idTechnique == 250 || idTechnique == 260 || idTechnique == 300)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.purpleNinjaButtons_L);
+        else if (idTechnique == 270 || idTechnique == 330)
+            techniqueButtons5.ChangeTechniqueButton(techniqueButtons5.orangeNinjaButtons_L);
+    }
+    public void ChangeTechniqueButtonsOfLevel6()
+    {
+        //black obi
+        //RIGHT SIDE
+        if (idTechnique == 35 || idTechnique == 36 || idTechnique == 39 || idTechnique == 40 ||
+            idTechnique == 44 || idTechnique == 47 || idTechnique == 48 || idTechnique == 50)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_R);
+        else if (idTechnique == 37 || idTechnique == 45)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_R);
+        else if (idTechnique == 38 || idTechnique == 41 || idTechnique == 42 || idTechnique == 46)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_R);
+        else if (idTechnique == 43 || idTechnique == 49)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_R);
+        //LEFT SIDE
+        else if (idTechnique == 350 || idTechnique == 360 || idTechnique == 390 || idTechnique == 400 ||
+            idTechnique == 440 || idTechnique == 470 || idTechnique == 480 || idTechnique == 500)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.greenNinjaButtons_L);
+        else if (idTechnique == 370 || idTechnique == 450)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.blueNinjaButtons_L);
+        else if (idTechnique == 380 || idTechnique == 410 || idTechnique == 420 || idTechnique == 460)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.purpleNinjaButtons_L);
+        else if (idTechnique == 430 || idTechnique == 490)
+            techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_L);
+    }
+
+
+
+
+
     public void GettingHit()
     {
         //if (doesPlayerGotHit)
@@ -272,6 +290,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isReadyToCollision)
         {
+            Debug.Log((collision.transform.position - transform.position) * 0.5f + transform.position);
             if (IsInvalidState() || !IsValidDirection(collision) || !TechniqueMatcher.CheckIfTechniqueIsEffective(collision.tag, idTechnique))
             {
                 GettingHit();

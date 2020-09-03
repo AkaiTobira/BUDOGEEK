@@ -392,11 +392,11 @@ GameObject:
   - component: {fileID: 26722797}
   m_Layer: 0
   m_Name: kizami_zuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &26722793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -413,7 +413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 35}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &26722794
@@ -490,6 +490,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &26722795
@@ -578,8 +589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &37510329
 MonoBehaviour:
@@ -600,7 +611,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ca890a5f4e9b494dacdccd91f650349, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b11dca42e5d9de4b8b267c58e3bfa9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -633,7 +644,7 @@ GameObject:
   - component: {fileID: 38587154}
   m_Layer: 0
   m_Name: uraken_uchi_button
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -733,6 +744,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &38587152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,7 +822,7 @@ GameObject:
   - component: {fileID: 40525927}
   m_Layer: 0
   m_Name: ageuke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,6 +920,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &40525925
@@ -1400,7 +1433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69957831
@@ -1433,7 +1466,7 @@ GameObject:
   - component: {fileID: 79972617}
   m_Layer: 0
   m_Name: ageuke_button
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1531,6 +1564,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &79972615
@@ -1943,7 +1987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -420}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111689339
@@ -2210,7 +2254,7 @@ GameObject:
   - component: {fileID: 136073811}
   m_Layer: 0
   m_Name: maegeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2310,6 +2354,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &136073809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2377,7 +2432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &136250398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2718,7 +2773,7 @@ GameObject:
   - component: {fileID: 190508192}
   m_Layer: 0
   m_Name: oizuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2816,6 +2871,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &190508190
@@ -2966,11 +3032,11 @@ GameObject:
   - component: {fileID: 200936086}
   m_Layer: 0
   m_Name: yokogeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &200936082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2987,7 +3053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 35}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200936083
@@ -3064,6 +3130,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &200936084
@@ -3359,7 +3436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &211952805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3571,7 +3648,7 @@ GameObject:
   - component: {fileID: 229654211}
   m_Layer: 0
   m_Name: ageuke_button
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3669,6 +3746,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &229654209
@@ -3812,7 +3900,7 @@ GameObject:
   - component: {fileID: 251240623}
   m_Layer: 0
   m_Name: shutouke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3910,6 +3998,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &251240621
@@ -4146,7 +4245,7 @@ GameObject:
   - component: {fileID: 265614389}
   m_Layer: 0
   m_Name: gyakuzuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4167,7 +4266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265614386
@@ -4246,6 +4345,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &265614387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4313,7 +4423,7 @@ GameObject:
   - component: {fileID: 276600854}
   m_Layer: 0
   m_Name: yoko_enpiuchi_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4334,7 +4444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 35}
+  m_AnchoredPosition: {x: 960, y: 260}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276600851
@@ -4411,6 +4521,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &276600852
@@ -4632,6 +4753,110 @@ MonoBehaviour:
   - {fileID: 1319845250}
   - {fileID: 1014308079}
   - {fileID: 2002520502}
+  playerController: {fileID: 1716290214}
+  levelManager: {fileID: 287651218}
+  LeftTechButtons:
+  - {fileID: 2083589081}
+  - {fileID: 920000512}
+  - {fileID: 560686401}
+  - {fileID: 1825736215}
+  - {fileID: 1994442194}
+  - {fileID: 2017900121}
+  - {fileID: 320609872}
+  - {fileID: 323312214}
+  - {fileID: 2087751028}
+  - {fileID: 863004117}
+  - {fileID: 1947174249}
+  - {fileID: 1891878691}
+  - {fileID: 1714581896}
+  - {fileID: 1160051441}
+  - {fileID: 1599448936}
+  - {fileID: 405590328}
+  - {fileID: 1844301334}
+  - {fileID: 864664761}
+  - {fileID: 1799654814}
+  - {fileID: 1207074535}
+  - {fileID: 40525922}
+  - {fileID: 713452212}
+  - {fileID: 1871146897}
+  - {fileID: 1832845307}
+  - {fileID: 1870972966}
+  - {fileID: 549215708}
+  - {fileID: 1551994724}
+  - {fileID: 302313198}
+  - {fileID: 1558108431}
+  - {fileID: 2063668331}
+  - {fileID: 1982685510}
+  - {fileID: 1977934002}
+  - {fileID: 745086142}
+  - {fileID: 1675925329}
+  - {fileID: 136073806}
+  - {fileID: 190508187}
+  - {fileID: 1380525073}
+  - {fileID: 1774578140}
+  - {fileID: 696384614}
+  - {fileID: 1822926566}
+  - {fileID: 251240618}
+  - {fileID: 1100540126}
+  - {fileID: 1413367430}
+  - {fileID: 1854862099}
+  - {fileID: 851995078}
+  - {fileID: 2016944784}
+  - {fileID: 1685302875}
+  - {fileID: 1106160871}
+  - {fileID: 1439925061}
+  - {fileID: 288259369}
+  RightTechButtons:
+  - {fileID: 1817157675}
+  - {fileID: 408858604}
+  - {fileID: 971711710}
+  - {fileID: 1234791739}
+  - {fileID: 79972612}
+  - {fileID: 1295115283}
+  - {fileID: 354125688}
+  - {fileID: 200936081}
+  - {fileID: 1835383742}
+  - {fileID: 1517288527}
+  - {fileID: 391267989}
+  - {fileID: 276600849}
+  - {fileID: 1922797970}
+  - {fileID: 1467853151}
+  - {fileID: 265614384}
+  - {fileID: 26722792}
+  - {fileID: 1835307296}
+  - {fileID: 1731624144}
+  - {fileID: 1529612380}
+  - {fileID: 2022738513}
+  - {fileID: 229654206}
+  - {fileID: 804732195}
+  - {fileID: 393921786}
+  - {fileID: 1020785995}
+  - {fileID: 1986988695}
+  - {fileID: 1792047721}
+  - {fileID: 442043013}
+  - {fileID: 1609417838}
+  - {fileID: 1226485467}
+  - {fileID: 752357624}
+  - {fileID: 1295456283}
+  - {fileID: 1612642485}
+  - {fileID: 38587149}
+  - {fileID: 1396409427}
+  - {fileID: 1553699625}
+  - {fileID: 305459062}
+  - {fileID: 321376493}
+  - {fileID: 1990500729}
+  - {fileID: 471239233}
+  - {fileID: 629776769}
+  - {fileID: 1854035370}
+  - {fileID: 1496483694}
+  - {fileID: 2134228288}
+  - {fileID: 1471513857}
+  - {fileID: 1712628518}
+  - {fileID: 1586368544}
+  - {fileID: 1540086126}
+  - {fileID: 1246807136}
+  - {fileID: 449008258}
+  - {fileID: 1293586451}
 --- !u!1 &288259369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4647,7 +4872,7 @@ GameObject:
   - component: {fileID: 288259374}
   m_Layer: 0
   m_Name: ushirogeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4747,6 +4972,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &288259372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4814,7 +5050,7 @@ GameObject:
   - component: {fileID: 302313203}
   m_Layer: 0
   m_Name: yoko_enpiuchi_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4914,6 +5150,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &302313201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4981,7 +5228,7 @@ GameObject:
   - component: {fileID: 305459067}
   m_Layer: 0
   m_Name: oizuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5079,6 +5326,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &305459065
@@ -5450,7 +5708,7 @@ GameObject:
   - component: {fileID: 320609877}
   m_Layer: 0
   m_Name: nukite_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5471,7 +5729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320609874
@@ -5550,6 +5808,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &320609875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5617,7 +5886,7 @@ GameObject:
   - component: {fileID: 321376498}
   m_Layer: 0
   m_Name: ageuke_button
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5717,6 +5986,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &321376496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5784,11 +6064,11 @@ GameObject:
   - component: {fileID: 323312219}
   m_Layer: 0
   m_Name: yokogeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &323312215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5805,7 +6085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 35}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323312216
@@ -5882,6 +6162,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &323312217
@@ -6133,6 +6424,10 @@ MonoBehaviour:
   thirdButtons: []
   fourthButtons: []
   namesOfTechniques: []
+  playerController: {fileID: 0}
+  levelManager: {fileID: 0}
+  LeftTechButtons: []
+  RightTechButtons: []
 --- !u!1 &332467912
 GameObject:
   m_ObjectHideFlags: 0
@@ -6293,7 +6588,7 @@ GameObject:
   - component: {fileID: 354125693}
   m_Layer: 0
   m_Name: nukite_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6314,7 +6609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354125690
@@ -6391,6 +6686,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &354125691
@@ -6571,7 +6877,7 @@ GameObject:
   - component: {fileID: 391267994}
   m_Layer: 0
   m_Name: mawashi_geri_button
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6592,7 +6898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: -415}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &391267991
@@ -6669,6 +6975,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &391267992
@@ -6812,7 +7129,7 @@ GameObject:
   - component: {fileID: 393921791}
   m_Layer: 0
   m_Name: nukite_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6910,6 +7227,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &393921789
@@ -7026,11 +7354,11 @@ GameObject:
   - component: {fileID: 405590333}
   m_Layer: 0
   m_Name: kizami_zuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &405590329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7047,7 +7375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 35}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405590330
@@ -7126,6 +7454,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &405590331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7193,7 +7532,7 @@ GameObject:
   - component: {fileID: 408858609}
   m_Layer: 0
   m_Name: ageuke_button
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7291,6 +7630,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &408858607
@@ -7417,7 +7767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419654593
@@ -7548,7 +7898,7 @@ GameObject:
   - component: {fileID: 442043018}
   m_Layer: 0
   m_Name: mawashi_geri_button
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7646,6 +7996,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &442043016
@@ -7754,7 +8115,7 @@ GameObject:
   - component: {fileID: 449008263}
   m_Layer: 0
   m_Name: uraken_uchi_button
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7854,6 +8215,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &449008261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7921,7 +8293,7 @@ GameObject:
   - component: {fileID: 471239238}
   m_Layer: 0
   m_Name: nukite_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8019,6 +8391,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &471239236
@@ -8650,7 +9033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522488757
@@ -8722,7 +9105,7 @@ GameObject:
   - component: {fileID: 549215713}
   m_Layer: 0
   m_Name: sotouke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8820,6 +9203,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &549215711
@@ -9064,7 +9458,7 @@ GameObject:
   - component: {fileID: 560686406}
   m_Layer: 0
   m_Name: maegeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9085,7 +9479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: 35}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &560686403
@@ -9162,6 +9556,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &560686404
@@ -9786,7 +10191,7 @@ GameObject:
   - component: {fileID: 629776774}
   m_Layer: 0
   m_Name: yokogeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9884,6 +10289,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &629776772
@@ -10249,7 +10665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669047629
@@ -10676,7 +11092,7 @@ GameObject:
   - component: {fileID: 696384619}
   m_Layer: 0
   m_Name: nukite_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10774,6 +11190,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &696384617
@@ -10998,7 +11425,7 @@ GameObject:
   - component: {fileID: 713452217}
   m_Layer: 0
   m_Name: gedanbarai_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11096,6 +11523,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &713452215
@@ -11384,7 +11822,7 @@ GameObject:
   - component: {fileID: 745086147}
   m_Layer: 0
   m_Name: uraken_uchi_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11482,6 +11920,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &745086145
@@ -11664,7 +12113,7 @@ GameObject:
   - component: {fileID: 752357629}
   m_Layer: 0
   m_Name: uchi_udeuke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11762,6 +12211,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &752357627
@@ -12076,7 +12536,7 @@ GameObject:
   - component: {fileID: 804732200}
   m_Layer: 0
   m_Name: gedanbarai_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12174,6 +12634,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &804732198
@@ -12460,7 +12931,7 @@ GameObject:
   - component: {fileID: 851995083}
   m_Layer: 0
   m_Name: yokogeri_keage_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12560,6 +13031,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &851995081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12627,11 +13109,11 @@ GameObject:
   - component: {fileID: 863004122}
   m_Layer: 0
   m_Name: sotouke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &863004118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12727,6 +13209,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &863004120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12794,11 +13287,11 @@ GameObject:
   - component: {fileID: 864664766}
   m_Layer: 0
   m_Name: ushirogeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &864664762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12815,7 +13308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -415}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864664763
@@ -12892,6 +13385,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &864664764
@@ -13307,7 +13811,7 @@ GameObject:
   - component: {fileID: 920000517}
   m_Layer: 0
   m_Name: ageuke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13405,6 +13909,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920000515
@@ -13647,7 +14162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955493762
@@ -13680,7 +14195,7 @@ GameObject:
   - component: {fileID: 971711715}
   m_Layer: 0
   m_Name: maegeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13701,7 +14216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: 35}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &971711712
@@ -13778,6 +14293,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &971711713
@@ -14220,7 +14746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1014308083
@@ -14327,7 +14853,7 @@ GameObject:
   - component: {fileID: 1020786000}
   m_Layer: 0
   m_Name: yokogeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14425,6 +14951,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1020785998
@@ -14738,7 +15275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -420}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042057901
@@ -14960,7 +15497,7 @@ GameObject:
   - component: {fileID: 1100540131}
   m_Layer: 0
   m_Name: sotouke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15058,6 +15595,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1100540129
@@ -15174,7 +15722,7 @@ GameObject:
   - component: {fileID: 1106160876}
   m_Layer: 0
   m_Name: kizami_zuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15272,6 +15820,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1106160874
@@ -15754,7 +16313,7 @@ GameObject:
   - component: {fileID: 1160051446}
   m_Layer: 0
   m_Name: uchi_udeuke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15775,7 +16334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -415}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160051443
@@ -15852,6 +16411,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1160051444
@@ -16198,7 +16768,7 @@ GameObject:
   - component: {fileID: 1207074540}
   m_Layer: 0
   m_Name: oizuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16298,6 +16868,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1207074538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16365,7 +16946,7 @@ GameObject:
   - component: {fileID: 1226485472}
   m_Layer: 0
   m_Name: yokogeri_keage_button
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16465,6 +17046,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1226485470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16532,11 +17124,11 @@ GameObject:
   - component: {fileID: 1234791741}
   m_Layer: 0
   m_Name: oizuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1234791740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16645,6 +17237,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1234791743
@@ -16777,7 +17380,7 @@ GameObject:
   - component: {fileID: 1246807141}
   m_Layer: 0
   m_Name: kizami_zuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16875,6 +17478,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1246807139
@@ -17059,7 +17673,7 @@ GameObject:
   - component: {fileID: 1293586456}
   m_Layer: 0
   m_Name: ushirogeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17159,6 +17773,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1293586454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17226,7 +17851,7 @@ GameObject:
   - component: {fileID: 1295115288}
   m_Layer: 0
   m_Name: gedanbarai_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17326,6 +17951,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1295115286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17393,7 +18029,7 @@ GameObject:
   - component: {fileID: 1295456288}
   m_Layer: 0
   m_Name: gyakuzuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17491,6 +18127,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1295456286
@@ -17617,7 +18264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296354894
@@ -17788,7 +18435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319845254
@@ -17878,7 +18525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328529827
@@ -18197,7 +18844,7 @@ GameObject:
   - component: {fileID: 1380525078}
   m_Layer: 0
   m_Name: ageuke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18295,6 +18942,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1380525076
@@ -18659,7 +19317,7 @@ GameObject:
   - component: {fileID: 1396409432}
   m_Layer: 0
   m_Name: ushirogeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18757,6 +19415,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1396409430
@@ -18971,7 +19640,7 @@ GameObject:
   - component: {fileID: 1413367435}
   m_Layer: 0
   m_Name: mawashi_geri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19069,6 +19738,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1413367433
@@ -19232,7 +19912,7 @@ GameObject:
   - component: {fileID: 1439925066}
   m_Layer: 0
   m_Name: uraken_uchi_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19330,6 +20010,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1439925064
@@ -19473,7 +20164,7 @@ GameObject:
   - component: {fileID: 1467853156}
   m_Layer: 0
   m_Name: uchi_udeuke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19494,7 +20185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -415}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467853153
@@ -19571,6 +20262,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1467853154
@@ -19679,7 +20381,7 @@ GameObject:
   - component: {fileID: 1471513862}
   m_Layer: 0
   m_Name: yoko_enpiuchi_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19777,6 +20479,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1471513860
@@ -20021,7 +20734,7 @@ GameObject:
   - component: {fileID: 1496483699}
   m_Layer: 0
   m_Name: sotouke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20119,6 +20832,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1496483697
@@ -20245,7 +20969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -459}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513349862
@@ -20278,11 +21002,11 @@ GameObject:
   - component: {fileID: 1517288532}
   m_Layer: 0
   m_Name: sotouke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1517288528
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20378,6 +21102,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1517288530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20445,7 +21180,7 @@ GameObject:
   - component: {fileID: 1529612385}
   m_Layer: 0
   m_Name: maegeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20543,6 +21278,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1529612383
@@ -20679,7 +21425,7 @@ GameObject:
   - component: {fileID: 1540086131}
   m_Layer: 0
   m_Name: gyakuzuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20777,6 +21523,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1540086129
@@ -20903,7 +21660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540456335
@@ -20936,7 +21693,7 @@ GameObject:
   - component: {fileID: 1551994729}
   m_Layer: 0
   m_Name: mawashi_geri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21036,6 +21793,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1551994727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21103,7 +21871,7 @@ GameObject:
   - component: {fileID: 1553699630}
   m_Layer: 0
   m_Name: maegeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21203,6 +21971,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1553699628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21270,7 +22049,7 @@ GameObject:
   - component: {fileID: 1558108436}
   m_Layer: 0
   m_Name: yokogeri_keage_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21370,6 +22149,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1558108434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21437,7 +22227,7 @@ GameObject:
   - component: {fileID: 1586368549}
   m_Layer: 0
   m_Name: uchi_udeuke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21537,6 +22327,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1586368547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21604,7 +22405,7 @@ GameObject:
   - component: {fileID: 1599448941}
   m_Layer: 0
   m_Name: gyakuzuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21625,7 +22426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1599448938
@@ -21702,6 +22503,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1599448939
@@ -21845,7 +22657,7 @@ GameObject:
   - component: {fileID: 1609417843}
   m_Layer: 0
   m_Name: yoko_enpiuchi_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21945,6 +22757,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1609417841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22012,7 +22835,7 @@ GameObject:
   - component: {fileID: 1612642490}
   m_Layer: 0
   m_Name: kizami_zuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22110,6 +22933,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1612642488
@@ -22426,7 +23260,7 @@ GameObject:
   - component: {fileID: 1675925334}
   m_Layer: 0
   m_Name: ushirogeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22526,6 +23360,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1675925332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22593,7 +23438,7 @@ GameObject:
   - component: {fileID: 1685302880}
   m_Layer: 0
   m_Name: gyakuzuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22691,6 +23536,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1685302878
@@ -22958,7 +23814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707502775
@@ -22991,7 +23847,7 @@ GameObject:
   - component: {fileID: 1712628523}
   m_Layer: 0
   m_Name: yokogeri_keage_button
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23091,6 +23947,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1712628521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23158,7 +24025,7 @@ GameObject:
   - component: {fileID: 1714581901}
   m_Layer: 0
   m_Name: yokogeri_keage_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23179,7 +24046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -190}
+  m_AnchoredPosition: {x: 960, y: 35}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714581898
@@ -23256,6 +24123,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1714581899
@@ -23726,7 +24604,7 @@ MonoBehaviour:
   isReadyToAttack: 1
   isReadyToCollision: 1
   highscorePref: 0
-  maxScoreMenu: {fileID: 0}
+  maxScoreMenu: {fileID: 129166800}
 --- !u!95 &1716290215
 Animator:
   serializedVersion: 3
@@ -23761,11 +24639,11 @@ GameObject:
   - component: {fileID: 1731624149}
   m_Layer: 0
   m_Name: ushirogeri_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1731624145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23782,7 +24660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -415}
+  m_AnchoredPosition: {x: 960, y: -190}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731624146
@@ -23859,6 +24737,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1731624147
@@ -24102,6 +24991,10 @@ MonoBehaviour:
   thirdButtons: []
   fourthButtons: []
   namesOfTechniques: []
+  playerController: {fileID: 0}
+  levelManager: {fileID: 0}
+  LeftTechButtons: []
+  RightTechButtons: []
 --- !u!1 &1774229089
 GameObject:
   m_ObjectHideFlags: 0
@@ -24164,7 +25057,7 @@ GameObject:
   - component: {fileID: 1774578145}
   m_Layer: 0
   m_Name: gedanbarai_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24262,6 +25155,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1774578143
@@ -24433,7 +25337,7 @@ GameObject:
   - component: {fileID: 1792047726}
   m_Layer: 0
   m_Name: sotouke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24531,6 +25435,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1792047724
@@ -24694,7 +25609,7 @@ GameObject:
   - component: {fileID: 1799654819}
   m_Layer: 0
   m_Name: maegeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24792,6 +25707,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1799654817
@@ -24942,7 +25868,7 @@ GameObject:
   - component: {fileID: 1817157680}
   m_Layer: 0
   m_Name: oizuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25040,6 +25966,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1817157678
@@ -25287,7 +26224,7 @@ GameObject:
   - component: {fileID: 1822926571}
   m_Layer: 0
   m_Name: yokogeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25387,6 +26324,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1822926569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25454,11 +26402,11 @@ GameObject:
   - component: {fileID: 1825736220}
   m_Layer: 0
   m_Name: oizuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1825736216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25554,6 +26502,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1825736218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25621,7 +26580,7 @@ GameObject:
   - component: {fileID: 1832845312}
   m_Layer: 0
   m_Name: yokogeri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25721,6 +26680,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1832845310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25788,7 +26758,7 @@ GameObject:
   - component: {fileID: 1835307301}
   m_Layer: 0
   m_Name: uraken_uchi_button
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25809,7 +26779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -190}
+  m_AnchoredPosition: {x: 960, y: -415}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835307298
@@ -25888,6 +26858,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1835307299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25955,7 +26936,7 @@ GameObject:
   - component: {fileID: 1835383747}
   m_Layer: 0
   m_Name: shutouke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25976,7 +26957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -190}
+  m_AnchoredPosition: {x: 960, y: -415}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835383744
@@ -26055,6 +27036,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1835383745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26122,7 +27114,7 @@ GameObject:
   - component: {fileID: 1844301339}
   m_Layer: 0
   m_Name: uraken_uchi_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26143,7 +27135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -190}
+  m_AnchoredPosition: {x: 960, y: -415}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844301336
@@ -26220,6 +27212,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1844301337
@@ -26390,7 +27393,7 @@ GameObject:
   - component: {fileID: 1854035375}
   m_Layer: 0
   m_Name: shutouke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26490,6 +27493,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1854035373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26557,7 +27571,7 @@ GameObject:
   - component: {fileID: 1854862104}
   m_Layer: 0
   m_Name: yoko_enpiuchi_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26657,6 +27671,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1854862102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26724,7 +27749,7 @@ GameObject:
   - component: {fileID: 1870972971}
   m_Layer: 0
   m_Name: shutouke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26824,6 +27849,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1870972969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26891,7 +27927,7 @@ GameObject:
   - component: {fileID: 1871146902}
   m_Layer: 0
   m_Name: nukite_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26989,6 +28025,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1871146900
@@ -27280,7 +28327,7 @@ GameObject:
   - component: {fileID: 1891878696}
   m_Layer: 0
   m_Name: yoko_enpiuchi_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27301,7 +28348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 35}
+  m_AnchoredPosition: {x: 960, y: 260}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891878693
@@ -27378,6 +28425,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1891878694
@@ -28020,7 +29078,7 @@ GameObject:
   - component: {fileID: 1922797975}
   m_Layer: 0
   m_Name: yokogeri_keage_button
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28041,7 +29099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -190}
+  m_AnchoredPosition: {x: 960, y: 35}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922797972
@@ -28118,6 +29176,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1922797973
@@ -28226,7 +29295,7 @@ GameObject:
   - component: {fileID: 1947174254}
   m_Layer: 0
   m_Name: mawashi_geri_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28247,7 +29316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 260}
+  m_AnchoredPosition: {x: 960, y: -415}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947174251
@@ -28324,6 +29393,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1947174252
@@ -28934,7 +30014,7 @@ GameObject:
   - component: {fileID: 1977934007}
   m_Layer: 0
   m_Name: kizami_zuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29034,6 +30114,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1977934005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29101,7 +30192,7 @@ GameObject:
   - component: {fileID: 1982685515}
   m_Layer: 0
   m_Name: gyakuzuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29199,6 +30290,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1982685513
@@ -29342,7 +30444,7 @@ GameObject:
   - component: {fileID: 1986988700}
   m_Layer: 0
   m_Name: shutouke_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29442,6 +30544,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1986988698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29509,7 +30622,7 @@ GameObject:
   - component: {fileID: 1990500734}
   m_Layer: 0
   m_Name: gedanbarai_button
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29609,6 +30722,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1990500732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29676,7 +30800,7 @@ GameObject:
   - component: {fileID: 1994442199}
   m_Layer: 0
   m_Name: ageuke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29774,6 +30898,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1994442197
@@ -29900,7 +31035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002520506
@@ -29933,7 +31068,7 @@ GameObject:
   - component: {fileID: 2016944789}
   m_Layer: 0
   m_Name: uchi_udeuke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30033,6 +31168,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2016944787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30100,7 +31246,7 @@ GameObject:
   - component: {fileID: 2017900126}
   m_Layer: 0
   m_Name: gedanbarai_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30198,6 +31344,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2017900124
@@ -30324,7 +31481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -485}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022574234
@@ -30357,7 +31514,7 @@ GameObject:
   - component: {fileID: 2022738518}
   m_Layer: 0
   m_Name: oizuki_button
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30455,6 +31612,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2022738516
@@ -30561,7 +31729,7 @@ GameObject:
   - component: {fileID: 2063668336}
   m_Layer: 0
   m_Name: uchi_udeuke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30661,6 +31829,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2063668334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30728,7 +31907,7 @@ GameObject:
   - component: {fileID: 2083589086}
   m_Layer: 0
   m_Name: oizuki_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30828,6 +32007,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2083589084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30895,7 +32085,7 @@ GameObject:
   - component: {fileID: 2087751033}
   m_Layer: 0
   m_Name: shutouke_button (1)
-  m_TagString: Untagged
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30916,7 +32106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: -190}
+  m_AnchoredPosition: {x: 960, y: -415}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087751030
@@ -30993,6 +32183,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2087751031
@@ -31205,7 +32406,7 @@ GameObject:
   - component: {fileID: 2134228293}
   m_Layer: 0
   m_Name: mawashi_geri_button
-  m_TagString: Untagged
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31303,6 +32504,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0.75
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 287651219}
+        m_MethodName: ChangeTechniqueButton2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2134228291

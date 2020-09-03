@@ -11,6 +11,7 @@ public class YenSystem : MonoBehaviour
     public PlayerController player;
     public Animator leftKiay;
     public Animator rightKiay;
+    private int numerOfNotDropYen = 0;
     void Start()
     {
         yen = PlayerPrefs.GetInt("Currency");
@@ -38,63 +39,58 @@ public class YenSystem : MonoBehaviour
     }
     public void DroppingYenSystem()
     {
-        int tmp;
+        int probability = Random.Range(0, 100);
+        if (probability < GetUpperBoundProbabilityPerLevel())
+        {
+            DropYen(GetAmountOfYenPerLevel());
+            ShowKiay();
+            numerOfNotDropYen = 0;
+        }
+        else
+            numerOfNotDropYen++;
+    }
+    private int GetUpperBoundProbabilityPerLevel()
+    {
         switch (PlayerPrefs.GetInt("CurrentLevel"))
         {
             case 0:
-                break;
+                return 0;
             case 1:
-                tmp = Random.Range(0, 10);
-                if (tmp == 1)
-                {
-                    DropYen(1);
-                    ShowKiay();
-                }
-                break;
+                return 5 + 5 * numerOfNotDropYen;
             case 2:
-                tmp = Random.Range(0, 9);
-                if (tmp == 1)
-                {
-                    DropYen(1);
-                    ShowKiay();
-                }
-                break;
+                return 6 + 6 * numerOfNotDropYen;
             case 3:
-                tmp = Random.Range(0, 8);
-                if (tmp == 1)
-                {
-                    DropYen(2);
-                    ShowKiay();
-                }
-                break;
+                return 7 + 7 * numerOfNotDropYen;
             case 4:
-                tmp = Random.Range(0, 7);
-                if (tmp == 1)
-                {
-                    DropYen(2);
-                    ShowKiay();
-                }
-                break;
+                return 8 + 8 * numerOfNotDropYen;
             case 5:
-                tmp = Random.Range(0, 6);
-                if (tmp == 1)
-                {
-                    DropYen(2);
-                    ShowKiay();
-                }
-                break;
+                return 9 + 9 * numerOfNotDropYen;
             case 6:
-                tmp = Random.Range(0, 5);
-                if (tmp == 1)
-                {
-                    DropYen(3);
-                    ShowKiay();
-                }
-                break;
+                return 10 + 10 * numerOfNotDropYen;
             default:
-                break;
+                return -1;
         }
     }
+    private int GetAmountOfYenPerLevel()
+    {
+        switch (PlayerPrefs.GetInt("CurrentLevel"))
+        {
+            case 0:
+                return 0;
+            case 1:
+            case 2:
+                return 1;
+            case 3:
+            case 4:
+            case 5:
+                return 2;
+            case 6:
+                return 3;
+            default:
+                return -1;
+        }
+    }
+
     public void ShowKiay()
     {
         if (player.facingRight)

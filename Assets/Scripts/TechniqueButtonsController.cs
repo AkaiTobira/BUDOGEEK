@@ -17,7 +17,15 @@ public class TechniqueButtonsController : MonoBehaviour
     public Button[] secondButtons;
     public Button[] thirdButtons;
     public Button[] fourthButtons;
+
+
     public GameObject[] namesOfTechniques;
+    public PlayerController playerController;
+    public LevelManager levelManager;
+    public GameObject[] LeftTechButtons;
+    public GameObject[] RightTechButtons;
+
+
     public void ChangeTechniqueButton(GameObject[] techNinjaButtons)
     {
         int tmp = Random.Range(0, techNinjaButtons.Length);
@@ -26,6 +34,17 @@ public class TechniqueButtonsController : MonoBehaviour
             button.SetActive(false);
         }
         techNinjaButtons[tmp].SetActive(true);
+    }
+    public void ChangeTechniqueButton2(string side)
+    {
+        if (TechniqueMatcher.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, gameObject.tag, playerController.idTechnique))
+        {
+            gameObject.SetActive(false);
+            if (side == "left")
+                LeftTechButtons[TechniqueMatcher.SwapButton(levelManager.currentLevel, gameObject.tag, playerController.idTechnique) - 1].SetActive(true);
+            else if (side == "right")
+                RightTechButtons[TechniqueMatcher.SwapButton(levelManager.currentLevel, gameObject.tag, playerController.idTechnique) - 1].SetActive(true);
+        }
     }
     public void ChangeButtonColor(Button button)
     {

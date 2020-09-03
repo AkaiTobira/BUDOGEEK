@@ -16,10 +16,11 @@ public class LevelManager : MonoBehaviour
     public Countdown countdown;
     public bool isGameStarted = false;
     public bool isReadyToContinue = true;
-    public bool isReady = false;
+    public bool isReady = true;
     public GameObject tutorialLayer;
     public TutorialMenu tutorialMenu;
     public YenSystem yenSystem;
+    private int tutorialStep = 0;
 
     void Start()
     {
@@ -103,37 +104,34 @@ public class LevelManager : MonoBehaviour
     }
     public void ShowIntroducingInformation()
     {
-        while (!isReady)
-        {
-            tutorialLayer.GetComponent<Animator>().SetTrigger("Welcome");
-            if (Input.touches.Length != 0)
-            {
-                isReady = true;
-            }
-        }
-        isReady = false;
-        while (!isReady)
-        {
-            tutorialLayer.GetComponent<Animator>().SetTrigger("ShowHUD");
-            if (Input.touches.Length != 0)
-            {
-                isReady = true;
-            }
-        }
-        isReady = false;
-        while (!isReady)
-        {
-            tutorialLayer.GetComponent<Animator>().SetTrigger("ShowBattle");
-            if (Input.touches.Length != 0)
-            {
-                isReady = true;
-            }
-        }
-        isReady = false;
+        StartCoroutine(WaitUntilBeingReadyToContinue(0, "Welcome"));
+        StartCoroutine(WaitUntilBeingReadyToContinue(1, "ShowHUD"));
+        StartCoroutine(WaitUntilBeingReadyToContinue(2, "ShowBattle"));
+        //dać 4 by był przeskok lub z 3 przy ninji
     }
-    IEnumerator WaitUntilBeingReadyToContinue()
+    IEnumerator WaitUntilBeingReadyToContinue(int currentTutorialStep, string nameOfTrigger)
     {
-        yield return new WaitForSeconds(2f);
+        if (currentTutorialStep != tutorialStep)
+            yield return new WaitForEndOfFrame();
+        if (isReady)
+        {
+            tutorialLayer.GetComponent<Animator>().SetTrigger(nameOfTrigger);
+            isReady = false;
+            yield return new WaitForEndOfFrame();
+        }
+        while (true)
+        {
+            if (Input.touches.Length != 0)
+            {
+                if (Input.touches[0].phase == TouchPhase.Ended)
+                {
+                    tutorialStep++;
+                    isReady = true;
+                    yield break;
+                }
+            }
+            yield return new WaitForEndOfFrame();
+        }
     }
     public void EndTutorial()
     {
