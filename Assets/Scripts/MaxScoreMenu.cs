@@ -10,20 +10,20 @@ public class MaxScoreMenu : MonoBehaviour
     public void PauseGameIfPlayerAchiveMaxScore()
     {
         levelManager.SaveLevelProgress();
-        if (PlayerPrefs.GetInt($"Score{levelManager.currentLevel}") == PlayerPrefs.GetInt($"MaxScore{levelManager.currentLevel}"))
-        {
-            StartCoroutine(GainMaxScore());
-        }
-    }
-    IEnumerator GainMaxScore()
-    {
-        yield return new WaitForSeconds(3f);
         maxScoreMenu.SetActive(true);
         Time.timeScale = 0f;
     }
     public void ContinueGameOnClick()
     {
+        maxScoreMenu.SetActive(false);
         Time.timeScale = 1f;
+    }
+    public void LoadNextLevelOnClick()
+    {
+        Time.timeScale = 1f;
+        int tmp = PlayerPrefs.GetInt("CurrentLevel");
+        tmp++;
+        PlayerPrefs.SetInt("CurrentLevel", tmp);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void GoToMainMenu()

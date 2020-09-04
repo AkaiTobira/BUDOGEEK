@@ -93,11 +93,12 @@ public class PlayerController : MonoBehaviour
             idTechnique = idTech;
             playerAnimation.SetInteger("idTechnique", idTechnique);
             playerAnimation.SetTrigger("technique");
-            TechniqueChanger();
+            //TechniqueChanger();
             isReadyToAttack = false;
             StartCoroutine(RestAWhile(TIME_OF_REST));
         }
     }
+    /*
     public void TechniqueChanger()
     {
         switch (levelManager.currentLevel)
@@ -239,7 +240,7 @@ public class PlayerController : MonoBehaviour
         else if (idTechnique == 430 || idTechnique == 490)
             techniqueButtons6.ChangeTechniqueButton(techniqueButtons6.orangeNinjaButtons_L);
     }
-
+    */
 
 
 

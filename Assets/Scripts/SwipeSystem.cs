@@ -21,6 +21,7 @@ public class SwipeSystem : MonoBehaviour
     public Animator beltOrKimonoAnimator;
     public string techName;
     public string stanceName;
+    public Image scrollViewItem;
     private bool IsCenterPosition(int i)
     {
         return scrollPosition < currentPositionsOfScrollItems[i] + (distance / 2) && scrollPosition > currentPositionsOfScrollItems[i] - (distance / 2);
@@ -147,8 +148,8 @@ public class SwipeSystem : MonoBehaviour
     */
     private void SetProperPaddingDependingOnResolution()
     {
-        horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - 400) / 2;
-        horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - 400) / 2;
+        horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - (int)scrollViewItem.sprite.rect.width) / 2;
+        horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - (int)scrollViewItem.sprite.rect.width) / 2;
         horizontalLayoutGroup.spacing = 340;
     }
     private void ResetCurrentPositionsOfScrollItems()

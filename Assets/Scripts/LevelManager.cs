@@ -17,8 +17,9 @@ public class LevelManager : MonoBehaviour
     public bool isGameStarted = false;
     public bool isReadyToContinue = true;
     public bool isReady = true;
-    public GameObject tutorialLayer;
+    public GameObject[] tutorialLayers;
     public TutorialMenu tutorialMenu;
+    public MaxScoreMenu maxScoreMenu;
     public YenSystem yenSystem;
     private int tutorialStep = 0;
 
@@ -30,9 +31,8 @@ public class LevelManager : MonoBehaviour
         opponent = FindObjectOfType<OpponentController>();
         DefineCurrentLevel();
         ChangeTechniqueButtonsDependingOnCurrentLevel();
-        /*
         if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
-            StartTutorial();*/
+            StartTutorial();
     }
     void Update()
     {
@@ -102,6 +102,7 @@ public class LevelManager : MonoBehaviour
     {
         ShowIntroducingInformation();
     }
+    /*
     public void ShowIntroducingInformation()
     {
         StartCoroutine(WaitUntilBeingReadyToContinue(0, "Welcome"));
@@ -133,6 +134,39 @@ public class LevelManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
     }
+    */
+    public void ShowIntroducingInformation()
+    {
+        StartCoroutine(WaitUntilBeingReadyToContinue(0));
+        StartCoroutine(WaitUntilBeingReadyToContinue(1));
+        StartCoroutine(WaitUntilBeingReadyToContinue(2));
+        StartCoroutine(WaitUntilBeingReadyToContinue(3));
+        //dać 4 by był przeskok lub z 3 przy ninji
+    }
+    IEnumerator WaitUntilBeingReadyToContinue(int currentTutorialStep)
+    {
+        if (currentTutorialStep != tutorialStep)
+            yield return new WaitForEndOfFrame();
+        if (isReady)
+        {
+            tutorialLayers[currentTutorialStep].GetComponent<Animator>().SetTrigger("NextStep");
+            isReady = false;
+            yield return new WaitForEndOfFrame();
+        }
+        while (true)
+        {
+            if (Input.touches.Length != 0)
+            {
+                if (Input.touches[0].phase == TouchPhase.Ended)
+                {
+                    tutorialStep++;
+                    isReady = true;
+                    yield break;
+                }
+            }
+            yield return new WaitForEndOfFrame();
+        }
+    }
     public void EndTutorial()
     {
         if (currentLevel == 0 && FindObjectOfType<ScoreSystem>().score == maxScores[currentLevel])
@@ -146,6 +180,21 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         tutorialMenu.PauseGameIfPlayerHasFinishedTutorial();
+    }
+
+    public void ShowMaxScoreMenu()
+    {
+        if ( (PlayerPrefs.GetInt($"Score{currentLevel}") == PlayerPrefs.GetInt($"MaxScore{currentLevel}")) && (PlayerPrefs.GetInt($"Diploma{currentLevel}") == 0) )
+        {
+            PlayerPrefs.SetInt($"Diploma{currentLevel}", 1);
+            StartCoroutine(GainedMaxScore());
+        }
+    }
+    IEnumerator GainedMaxScore()
+    {
+        SaveLevelProgress();
+        yield return new WaitForSeconds(1.5f);
+        maxScoreMenu.PauseGameIfPlayerAchiveMaxScore();
     }
 
     /*
