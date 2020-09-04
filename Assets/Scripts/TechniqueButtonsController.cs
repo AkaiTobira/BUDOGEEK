@@ -35,16 +35,20 @@ public class TechniqueButtonsController : MonoBehaviour
         }
         techNinjaButtons[tmp].SetActive(true);
     }
-    public void ChangeTechniqueButton2(string side)
+    public void ChangeRightButton(string tag)
     {
-        //Czy OnClick wywoluje sie jednoczesnie? playerController.idTechnique zmienia sie OnClick jak i ChangeTechniqueButton2 jest OnClick czy to jest przyczyna problemu?
-        if (TechniqueMatcher.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, gameObject.tag, playerController.idTechnique))
+        if (ButtonChanger.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, tag, playerController.idTechnique))
         {
-            gameObject.SetActive(false);
-            if (side == "left")
-                LeftTechButtons[TechniqueMatcher.SwapButton(levelManager.currentLevel, gameObject.tag, playerController.idTechnique) - 1].SetActive(true);
-            else if (side == "right")
-                RightTechButtons[TechniqueMatcher.SwapButton(levelManager.currentLevel, gameObject.tag, playerController.idTechnique) - 1].SetActive(true);
+            RightTechButtons[playerController.idTechnique - 1].SetActive(false);
+            RightTechButtons[ButtonChanger.SwapButton(levelManager.currentLevel, tag, playerController.idTechnique) - 1].SetActive(true);
+        }
+    }
+    public void ChangeLeftButton(string tag)
+    {
+        if (ButtonChanger.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, tag, playerController.idTechnique))
+        {
+            LeftTechButtons[playerController.idTechnique - 1].SetActive(false);
+            LeftTechButtons[ButtonChanger.SwapButton(levelManager.currentLevel, tag, playerController.idTechnique) - 1].SetActive(true);
         }
     }
     public void ChangeButtonColor(Button button)

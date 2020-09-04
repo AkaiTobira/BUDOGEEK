@@ -493,14 +493,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &26722795
@@ -745,14 +745,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &38587152
@@ -923,14 +923,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &40525925
@@ -1661,14 +1661,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &79972615
@@ -2449,14 +2449,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &136073809
@@ -2968,14 +2968,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &190508190
@@ -3227,14 +3227,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &200936084
@@ -3989,14 +3989,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &229654209
@@ -4241,14 +4241,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &251240621
@@ -4586,14 +4586,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &265614387
@@ -4764,14 +4764,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &276600852
@@ -5218,14 +5218,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &288259372
@@ -5396,14 +5396,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &302313201
@@ -5574,14 +5574,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &305459065
@@ -6054,14 +6054,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &320609875
@@ -6232,14 +6232,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &321376496
@@ -6410,14 +6410,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &323312217
@@ -7028,14 +7028,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &354125691
@@ -7317,14 +7317,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &391267992
@@ -7569,14 +7569,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &393921789
@@ -7794,14 +7794,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &405590331
@@ -7972,14 +7972,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &408858607
@@ -8432,14 +8432,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &442043016
@@ -8795,14 +8795,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &449008261
@@ -8973,14 +8973,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &471239236
@@ -9785,14 +9785,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &549215711
@@ -10138,14 +10138,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &560686404
@@ -10871,14 +10871,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &629776772
@@ -11772,14 +11772,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &696384617
@@ -12293,14 +12293,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &713452215
@@ -12690,14 +12690,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &745086145
@@ -12981,14 +12981,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &752357627
@@ -13404,14 +13404,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &804732198
@@ -13799,14 +13799,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &851995081
@@ -13977,14 +13977,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &863004120
@@ -14155,14 +14155,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &864664764
@@ -14679,14 +14679,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920000515
@@ -15063,14 +15063,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &971711713
@@ -15815,14 +15815,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1020785998
@@ -16553,14 +16553,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1100540129
@@ -16778,14 +16778,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1106160874
@@ -17369,14 +17369,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1160051444
@@ -17824,14 +17824,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1207074538
@@ -18147,14 +18147,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1226485470
@@ -18340,14 +18340,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1234791743
@@ -18581,14 +18581,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1246807139
@@ -18874,14 +18874,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1293586454
@@ -19052,14 +19052,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1295115286
@@ -19230,14 +19230,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1295456286
@@ -20045,14 +20045,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1380525076
@@ -20518,14 +20518,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1396409430
@@ -20841,14 +20841,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1413367433
@@ -21113,14 +21113,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1439925064
@@ -21365,14 +21365,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1467853154
@@ -21582,14 +21582,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1471513860
@@ -21935,14 +21935,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1496483697
@@ -22203,14 +22203,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1517288530
@@ -22381,14 +22381,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1529612383
@@ -22626,14 +22626,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1540086129
@@ -22894,14 +22894,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1551994727
@@ -23072,14 +23072,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1553699628
@@ -23250,14 +23250,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1558108434
@@ -23428,14 +23428,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1586368547
@@ -23606,14 +23606,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1599448939
@@ -23858,14 +23858,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1609417841
@@ -24036,14 +24036,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1612642488
@@ -24555,14 +24555,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1675925332
@@ -24733,14 +24733,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1685302878
@@ -25143,14 +25143,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1712628521
@@ -25321,14 +25321,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1714581899
@@ -25935,14 +25935,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1731624147
@@ -26353,14 +26353,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1774578143
@@ -26633,14 +26633,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1792047724
@@ -27000,14 +27000,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1799654817
@@ -27259,14 +27259,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1817157678
@@ -27616,14 +27616,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1822926569
@@ -27794,14 +27794,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1825736218
@@ -27972,14 +27972,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1832845310
@@ -28150,14 +28150,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1835307299
@@ -28328,14 +28328,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1835383745
@@ -28506,14 +28506,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1844301337
@@ -28785,14 +28785,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1854035373
@@ -28963,14 +28963,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1854862102
@@ -29141,14 +29141,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1870972969
@@ -29319,14 +29319,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1871146900
@@ -29719,14 +29719,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1891878694
@@ -30470,14 +30470,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1922797973
@@ -30687,14 +30687,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1947174252
@@ -31406,14 +31406,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1977934005
@@ -31584,14 +31584,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1982685513
@@ -31836,14 +31836,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1986988698
@@ -32014,14 +32014,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1990500732
@@ -32192,14 +32192,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1994442197
@@ -32460,14 +32460,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2016944787
@@ -32638,14 +32638,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2017900124
@@ -32906,14 +32906,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2022738516
@@ -33368,14 +33368,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2063668334
@@ -33546,14 +33546,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2083589084
@@ -33724,14 +33724,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeLeftButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: left
+          m_StringArgument: Enemy3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2087751031
@@ -34045,14 +34045,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 287651219}
-        m_MethodName: ChangeTechniqueButton2
+        m_MethodName: ChangeRightButton
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: right
+          m_StringArgument: Enemy4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2134228291
