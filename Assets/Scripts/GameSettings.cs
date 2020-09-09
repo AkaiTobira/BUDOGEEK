@@ -59,4 +59,13 @@ public class GameSettings : MonoBehaviour
         PlayerPrefs.SetInt("Score5", 0);
         PlayerPrefs.SetInt("Score6", 0);
     }
+    public void SetDiplomas()
+    {
+        PlayerPrefs.SetInt($"Diploma1", 0);
+        PlayerPrefs.SetInt($"Diploma2", 0);
+        PlayerPrefs.SetInt($"Diploma3", 0);
+        PlayerPrefs.SetInt($"Diploma4", 0);
+        PlayerPrefs.SetInt($"Diploma5", 0);
+        PlayerPrefs.SetInt($"Diploma6", 0);
+    }
 }

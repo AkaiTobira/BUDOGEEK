@@ -18,8 +18,8 @@ public class LevelMenu : MonoBehaviour
     */
     void Start()
     {
-        FillButtonsText();
         SavePlayerProgress();
+        FillButtonsText();
         UnlockButtons();
     }
     /*
@@ -43,7 +43,7 @@ public class LevelMenu : MonoBehaviour
         for (int i = 1; i < levelButtons.Length; i++)
         {
             Text text = levelButtons[i].GetComponentInChildren<Text>();
-            text.text = $"Poziom {i}: {PlayerPrefs.GetInt($"HighScore{i-1}")} / {PlayerPrefs.GetInt($"MaxScore{i-1}")}";
+            text.text = $"Poziom {i}:\n{PlayerPrefs.GetInt($"HighScore{i-1}")} / {PlayerPrefs.GetInt($"MaxScore{i-1}")}";
         }
     }
     public void UnlockButtons()

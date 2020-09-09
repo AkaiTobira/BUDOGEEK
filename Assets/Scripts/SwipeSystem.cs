@@ -22,6 +22,7 @@ public class SwipeSystem : MonoBehaviour
     public string techName;
     public string stanceName;
     public Image scrollViewItem;
+    //public Image scrollViewNameOfItem;
     private bool IsCenterPosition(int i)
     {
         return scrollPosition < currentPositionsOfScrollItems[i] + (distance / 2) && scrollPosition > currentPositionsOfScrollItems[i] - (distance / 2);
@@ -148,9 +149,11 @@ public class SwipeSystem : MonoBehaviour
     */
     private void SetProperPaddingDependingOnResolution()
     {
+        //horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - (int)(scrollViewItem.sprite.rect.width + (scrollViewNameOfItem.sprite.rect.width - scrollViewItem.sprite.rect.width))) / 2;
+        //horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - (int)(scrollViewItem.sprite.rect.width + (scrollViewNameOfItem.sprite.rect.width - scrollViewItem.sprite.rect.width))) / 2;
         horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - (int)scrollViewItem.sprite.rect.width) / 2;
         horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - (int)scrollViewItem.sprite.rect.width) / 2;
-        horizontalLayoutGroup.spacing = 340;
+        horizontalLayoutGroup.spacing = 150;
     }
     private void ResetCurrentPositionsOfScrollItems()
     {
@@ -196,7 +199,7 @@ public class SwipeSystem : MonoBehaviour
         {
             if (j != currentActiveScrollItem)
             {
-                transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.6f, 0.6f), 0.1f);
+                transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.5f, 0.5f), 0.1f);
             }
         }
     }

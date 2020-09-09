@@ -291,7 +291,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isReadyToCollision)
         {
-            Debug.Log((collision.transform.position - transform.position) * 0.5f + transform.position);
+            //Debug.Log((collision.transform.position - transform.position) * 0.5f + transform.position);
             if (IsInvalidState() || !IsValidDirection(collision) || !TechniqueMatcher.CheckIfTechniqueIsEffective(collision.tag, idTechnique))
             {
                 GettingHit();
@@ -300,9 +300,11 @@ public class PlayerController : MonoBehaviour
             {
                 FindObjectOfType<ScoreSystem>().AddToScore(1);
                 FindObjectOfType<DiplomasController>().ShowDiplomaIfGainMaxScoreOfCurrentLevel();
-                maxScoreMenu.PauseGameIfPlayerAchiveMaxScore();
+                //maxScoreMenu.PauseGameIfPlayerAchiveMaxScore();
                 FindObjectOfType<YenSystem>().DroppingYenSystem();
                 levelManager.EndTutorial();
+                levelManager.SaveLevelProgress();
+                levelManager.ShowMaxScoreMenu();
             }
             isReadyToCollision = false;
             StartCoroutine(WaitAWhile(TIME_OF_REST));

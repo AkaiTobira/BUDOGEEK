@@ -15,6 +15,7 @@ public class DiplomasController : MonoBehaviour
     }
     public void ShowDiplomaIfGainMaxScoreOfCurrentLevel()
     {
+        if (levelManager.currentLevel == 6) return;
         if (FindObjectOfType<ScoreSystem>().score == levelManager.maxScores[levelManager.currentLevel])
         {
             levelManager.SaveLevelProgress();

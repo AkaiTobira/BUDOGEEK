@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class LevelManager : MonoBehaviour
 {
@@ -17,30 +18,45 @@ public class LevelManager : MonoBehaviour
     public bool isGameStarted = false;
     public bool isReadyToContinue = true;
     public bool isReady = true;
+    public bool isReadyToTutorial = true;
     public GameObject[] tutorialLayers;
     public TutorialMenu tutorialMenu;
     public MaxScoreMenu maxScoreMenu;
     public YenSystem yenSystem;
-    private int tutorialStep = 0;
+    public int tutorialStep = 0;
 
     void Start()
     {
-        StartCoroutine(StartCounting());
-        StartCoroutine(ActivateOpponents());
         player = FindObjectOfType<PlayerController>();
         opponent = FindObjectOfType<OpponentController>();
         DefineCurrentLevel();
-        ChangeTechniqueButtonsDependingOnCurrentLevel();
         if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
             StartTutorial();
+        
+        //if (PlayerPrefs.GetInt("Tutorial") == 1)
+        //{
+            ChangeTechniqueButtonsDependingOnCurrentLevel();
+            StartCoroutine(StartCounting());
+            StartCoroutine(ActivateOpponents());
+        //}
+        
     }
+    //private bool continueTutorialButtonPressed = false;
     void Update()
     {
+        //continueTutorialButtonPressed = Input.GetKeyDown(KeyCode.Q);
     }
     public void DefineCurrentLevel()
     {
-        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+        //currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+        currentLevel = 6;
         PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
+    }
+    public void StartGame()
+    {
+        ChangeTechniqueButtonsDependingOnCurrentLevel();
+        StartCoroutine(StartCounting());
+        StartCoroutine(ActivateOpponents());
     }
     /*
     public void DefineCurrentLevelDependingOnChoice()//if level is chosen from LevelMenu's buttons list
@@ -138,29 +154,49 @@ public class LevelManager : MonoBehaviour
     public void ShowIntroducingInformation()
     {
         StartCoroutine(WaitUntilBeingReadyToContinue(0));
-        StartCoroutine(WaitUntilBeingReadyToContinue(1));
-        StartCoroutine(WaitUntilBeingReadyToContinue(2));
-        StartCoroutine(WaitUntilBeingReadyToContinue(3));
         //dać 4 by był przeskok lub z 3 przy ninji
+    }
+    public void ShowTutorialLayer7()
+    {
+        if (tutorialStep == 7)
+            StartCoroutine(WaitUntilBeingReadyToContinue(7));
+
     }
     IEnumerator WaitUntilBeingReadyToContinue(int currentTutorialStep)
     {
         if (currentTutorialStep != tutorialStep)
             yield return new WaitForEndOfFrame();
-        if (isReady)
+        if (isReadyToTutorial)
         {
-            tutorialLayers[currentTutorialStep].GetComponent<Animator>().SetTrigger("NextStep");
-            isReady = false;
+            tutorialLayers[currentTutorialStep].SetActive(true);
+            tutorialLayers[currentTutorialStep].GetComponent<Animator>().SetTrigger("animateLayer");
+            isReadyToTutorial = false;
+            if (tutorialStep == 7)
+                Time.timeScale = 0f;
             yield return new WaitForEndOfFrame();
         }
         while (true)
         {
-            if (Input.touches.Length != 0)
+            /*Debug.Log(continueTutorialButtonPressed);*/
+            //if (Input.GetTouch(0).phase.Equals(TouchPhase.Ended))
+            if (Input.touchCount > 0/* || continueTutorialButtonPressed*/)//if (Input.touches.Length != 0)
             {
-                if (Input.touches[0].phase == TouchPhase.Ended)
+                if (/*continueTutorialButtonPressed || */Input.GetTouch(0).phase.Equals(TouchPhase.Ended)) //if (Input.touches[0].phase == TouchPhase.Ended)
                 {
+                    tutorialLayers[currentTutorialStep].SetActive(false);
                     tutorialStep++;
-                    isReady = true;
+                    isReadyToTutorial = true;
+                    if (tutorialStep < 7)
+                        StartCoroutine(WaitUntilBeingReadyToContinue(tutorialStep));
+                    if (tutorialStep == 7)
+                    {
+                        StartGame();
+                    }
+                    if (tutorialStep == 8)
+                    {
+                        Time.timeScale = 1f;
+                    }
+                    //continueTutorialButtonPressed = false;
                     yield break;
                 }
             }
@@ -184,7 +220,8 @@ public class LevelManager : MonoBehaviour
 
     public void ShowMaxScoreMenu()
     {
-        if ( (PlayerPrefs.GetInt($"Score{currentLevel}") == PlayerPrefs.GetInt($"MaxScore{currentLevel}")) && (PlayerPrefs.GetInt($"Diploma{currentLevel}") == 0) )
+        if ((currentLevel != 0) && (PlayerPrefs.GetInt($"Diploma{currentLevel}") == 0) && 
+            (PlayerPrefs.GetInt($"Score{currentLevel}") == PlayerPrefs.GetInt($"MaxScore{currentLevel}")))
         {
             PlayerPrefs.SetInt($"Diploma{currentLevel}", 1);
             StartCoroutine(GainedMaxScore());

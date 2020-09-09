@@ -37,18 +37,19 @@ public class TechniqueButtonsController : MonoBehaviour
     }
     public void ChangeRightButton(string tag)
     {
-        if (ButtonChanger.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, tag, playerController.idTechnique))
-        {
-            RightTechButtons[playerController.idTechnique - 1].SetActive(false);
-            RightTechButtons[ButtonChanger.SwapButton(levelManager.currentLevel, tag, playerController.idTechnique) - 1].SetActive(true);
-        }
+        StartCoroutine(ChangeButton(tag, RightTechButtons));
     }
     public void ChangeLeftButton(string tag)
     {
+        StartCoroutine(ChangeButton(tag, LeftTechButtons));
+    }
+    IEnumerator ChangeButton(string tag, GameObject[] buttons)
+    {
+        yield return new WaitForSeconds(0.8f);
         if (ButtonChanger.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, tag, playerController.idTechnique))
         {
-            LeftTechButtons[playerController.idTechnique - 1].SetActive(false);
-            LeftTechButtons[ButtonChanger.SwapButton(levelManager.currentLevel, tag, playerController.idTechnique) - 1].SetActive(true);
+            buttons[playerController.idTechnique - 1].SetActive(false);
+            buttons[ButtonChanger.SwapButton(levelManager.currentLevel, tag, playerController.idTechnique) - 1].SetActive(true);
         }
     }
     public void ChangeButtonColor(Button button)
