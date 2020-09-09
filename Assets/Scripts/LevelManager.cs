@@ -32,13 +32,12 @@ public class LevelManager : MonoBehaviour
         DefineCurrentLevel();
         if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
             StartTutorial();
-        
-        //if (PlayerPrefs.GetInt("Tutorial") == 1)
-        //{
+        if (PlayerPrefs.GetInt("Tutorial") == 1)
+        {
             ChangeTechniqueButtonsDependingOnCurrentLevel();
             StartCoroutine(StartCounting());
             StartCoroutine(ActivateOpponents());
-        //}
+        }
         
     }
     //private bool continueTutorialButtonPressed = false;
@@ -48,8 +47,7 @@ public class LevelManager : MonoBehaviour
     }
     public void DefineCurrentLevel()
     {
-        //currentLevel = PlayerPrefs.GetInt("CurrentLevel");
-        currentLevel = 6;
+        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
         PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
     }
     public void StartGame()
