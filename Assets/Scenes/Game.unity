@@ -1645,7 +1645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10/10
+  m_Text: 5/5
 --- !u!222 &53778800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3611,7 +3611,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 300/300
+  m_Text: 100/100
 --- !u!222 &188438450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6090,7 +6090,7 @@ MonoBehaviour:
   - {fileID: 2047937332}
   - {fileID: 324981325}
   - {fileID: 1772328990}
-  maxScores: 0a000000190000003200000064000000c80000002c010000
+  maxScores: 050000000f0000001e000000320000004b00000064000000
   maxScore: 0
   countdown: {fileID: 748246075}
   isGameStarted: 0
@@ -6982,7 +6982,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25/25
+  m_Text: 15/15
 --- !u!222 &306622074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21681,7 +21681,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100/100
+  m_Text: 50/50
 --- !u!222 &1118704332
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23473,7 +23473,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50/50
+  m_Text: 30/30
 --- !u!222 &1241362080
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23766,7 +23766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 200/200
+  m_Text: 75/75
 --- !u!222 &1257372387
 CanvasRenderer:
   m_ObjectHideFlags: 0
