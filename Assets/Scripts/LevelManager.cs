@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
     public MaxScoreMenu maxScoreMenu;
     public YenSystem yenSystem;
     public int tutorialStep = 0;
-
+    private bool continueTutorialButtonPressed = false;
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -32,22 +32,21 @@ public class LevelManager : MonoBehaviour
         DefineCurrentLevel();
         if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
             StartTutorial();
-        if (PlayerPrefs.GetInt("Tutorial") == 1)
-        {
+        //if (PlayerPrefs.GetInt("Tutorial") == 1)
+        //{
             ChangeTechniqueButtonsDependingOnCurrentLevel();
             StartCoroutine(StartCounting());
             StartCoroutine(ActivateOpponents());
-        }
+        //}
         
     }
-    //private bool continueTutorialButtonPressed = false;
     void Update()
     {
-        //continueTutorialButtonPressed = Input.GetKeyDown(KeyCode.Q);
+        continueTutorialButtonPressed = Input.GetKeyDown(KeyCode.Q);
     }
     public void DefineCurrentLevel()
     {
-        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+        currentLevel = 5;// PlayerPrefs.GetInt("CurrentLevel");
         PlayerPrefs.SetInt("LastLevelPlayed", currentLevel);
     }
     public void StartGame()
@@ -177,9 +176,9 @@ public class LevelManager : MonoBehaviour
         {
             /*Debug.Log(continueTutorialButtonPressed);*/
             //if (Input.GetTouch(0).phase.Equals(TouchPhase.Ended))
-            if (Input.touchCount > 0/* || continueTutorialButtonPressed*/)//if (Input.touches.Length != 0)
+            if (Input.touchCount > 0 || continueTutorialButtonPressed)//if (Input.touches.Length != 0)
             {
-                if (/*continueTutorialButtonPressed || */Input.GetTouch(0).phase.Equals(TouchPhase.Ended)) //if (Input.touches[0].phase == TouchPhase.Ended)
+                if (continueTutorialButtonPressed || Input.GetTouch(0).phase.Equals(TouchPhase.Ended)) //if (Input.touches[0].phase == TouchPhase.Ended)
                 {
                     tutorialLayers[currentTutorialStep].SetActive(false);
                     tutorialStep++;
