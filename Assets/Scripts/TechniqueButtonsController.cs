@@ -17,7 +17,7 @@ public class TechniqueButtonsController : MonoBehaviour
     public Button[] secondButtons;
     public Button[] thirdButtons;
     public Button[] fourthButtons;
-
+    
 
     public GameObject[] namesOfTechniques;
     public PlayerController playerController;

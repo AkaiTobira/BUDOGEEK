@@ -109,4 +109,8 @@ public class LevelMenu : MonoBehaviour
                     
     }
     */
+    public void ResetTutorial()
+    {
+        PlayerPrefs.SetInt("Tutorial", 0);
+    }
 }

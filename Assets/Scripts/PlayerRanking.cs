@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerRanking : MonoBehaviour
 {
     public Text[] totalScoresText;
-    public void Awake()
+    public void Start()
     {
         SetTotalScore();
     }

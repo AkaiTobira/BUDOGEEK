@@ -32,12 +32,12 @@ public class LevelManager : MonoBehaviour
         DefineCurrentLevel();
         if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
             StartTutorial();
-        //if (PlayerPrefs.GetInt("Tutorial") == 1)
-        //{
+        else if (PlayerPrefs.GetInt("FinishedTutorial") == 1)
+        {
             ChangeTechniqueButtonsDependingOnCurrentLevel();
             StartCoroutine(StartCounting());
             StartCoroutine(ActivateOpponents());
-        //}
+        }
         
     }
     void Update()

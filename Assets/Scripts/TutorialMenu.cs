@@ -11,7 +11,10 @@ public class TutorialMenu : MonoBehaviour
     {
         levelManager.SaveLevelProgress();
         if (PlayerPrefs.GetInt("Tutorial") == 0)
+        {
             PlayerPrefs.SetInt("Tutorial", 1);
+            PlayerPrefs.SetInt("FinishedTutorial", 1);
+        }
         tutorialMenu.SetActive(true);
         Time.timeScale = 0f;
     }
