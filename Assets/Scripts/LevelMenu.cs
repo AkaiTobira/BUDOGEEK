@@ -38,6 +38,7 @@ public class LevelMenu : MonoBehaviour
         }
     }
     */
+    /*
     public void FillButtonsText()
     {
         for (int i = 1; i < levelButtons.Length; i++)
@@ -55,6 +56,27 @@ public class LevelMenu : MonoBehaviour
                 levelButtons[i].interactable = true;
                 Text text = levelButtons[i].GetComponentInChildren<Text>();
                 text.text = $"Poziom {i}";
+            }
+        }
+    }
+    */
+    public void FillButtonsText()
+    {
+        for (int i = 1; i < levelButtons.Length; i++)
+        {
+            Text text = levelButtons[i].GetComponentInChildren<Text>();
+            text.text = $"{PlayerPrefs.GetInt($"HighScore{i - 1}")} / {PlayerPrefs.GetInt($"MaxScore{i - 1}")}";
+        }
+    }
+    public void UnlockButtons()
+    {
+        for (int i = 1; i < levelButtons.Length; i++)
+        {
+            if (PlayerPrefs.GetInt($"HighScore{i-1}") >= PlayerPrefs.GetInt($"MaxScore{i-1}"))
+            {
+                levelButtons[i].interactable = true;
+                Text text = levelButtons[i].GetComponentInChildren<Text>();
+                text.text = "";
             }
         }
     }

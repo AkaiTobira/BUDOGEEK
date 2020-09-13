@@ -8,7 +8,7 @@ public class GameSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("GameSettings") == 1) return;
+        if (PlayerPrefs.GetInt("GameSettings") == 2) return;
         SetScoreThresholds();
         SetTmpScores();
         SetScores();
@@ -31,13 +31,12 @@ public class GameSettings : MonoBehaviour
     }
     public void SetScoreThresholds()
     {
-        PlayerPrefs.SetInt("MaxScore0", 10);
-        PlayerPrefs.SetInt("MaxScore1", 25);
-        PlayerPrefs.SetInt("MaxScore2", 50);
-        PlayerPrefs.SetInt("MaxScore3", 100);
-        PlayerPrefs.SetInt("MaxScore4", 200);
-        PlayerPrefs.SetInt("MaxScore5", 300);
-        PlayerPrefs.SetInt("MaxScore6", 500);
+        PlayerPrefs.SetInt("MaxScore0", 5);
+        PlayerPrefs.SetInt("MaxScore1", 15);
+        PlayerPrefs.SetInt("MaxScore2", 30);
+        PlayerPrefs.SetInt("MaxScore3", 50);
+        PlayerPrefs.SetInt("MaxScore4", 75);
+        PlayerPrefs.SetInt("MaxScore5", 100);
     }
     public void SetTmpScores()
     {
