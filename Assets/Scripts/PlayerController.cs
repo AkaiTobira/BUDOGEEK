@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     //public bool doesPlayerGotHit = false;
     private const float TIME_OF_REST = 0.8f;
     public MaxScoreMenu maxScoreMenu;
+    public AudioSource loseSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -257,6 +258,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             playerAnimation.SetTrigger("losing");
+            loseSound.Play();
             health.ChangeHealthStatus(0);
             StartCoroutine(WaitToEndOfAnimation());
             //respawn/reset

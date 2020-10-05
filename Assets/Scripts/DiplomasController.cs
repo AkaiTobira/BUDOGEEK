@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DiplomasController : MonoBehaviour
 {
+    public AudioSource diplomaSound;
     public GameObject[] diplomas;
     public PlayerController player;
     public LevelManager levelManager;
@@ -16,11 +17,13 @@ public class DiplomasController : MonoBehaviour
     public void ShowDiplomaIfGainMaxScoreOfCurrentLevel()
     {
         if (levelManager.currentLevel == 6) return;
-        if (FindObjectOfType<ScoreSystem>().score == levelManager.maxScores[levelManager.currentLevel])
+        if (FindObjectOfType<ScoreSystem>().score == levelManager.maxScores[levelManager.currentLevel] &&
+            PlayerPrefs.GetInt($"Diploma{levelManager.currentLevel}") == 0)
         {
             levelManager.SaveLevelProgress();
             FindObjectOfType<OpponentController>().doesAchieveMaxScore = true;
             diplomas[levelManager.currentLevel].GetComponent<Animator>().SetTrigger("showDiploma");
+            diplomaSound.Play();
             StartCoroutine(StartCounting());
             StartCoroutine(ActivateOpponents());
         }

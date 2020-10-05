@@ -25,25 +25,28 @@ public class LevelManager : MonoBehaviour
     public YenSystem yenSystem;
     public int tutorialStep = 0;
     private bool continueTutorialButtonPressed = false;
+    public GameObject[] opponents;
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
         opponent = FindObjectOfType<OpponentController>();
         DefineCurrentLevel();
         if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
-            StartTutorial();
-        else if (PlayerPrefs.GetInt("FinishedTutorial") == 1)
         {
-            ChangeTechniqueButtonsDependingOnCurrentLevel();
-            StartCoroutine(StartCounting());
-            StartCoroutine(ActivateOpponents());
+            StartTutorial();
+            PlayerPrefs.SetInt("Tutorial", 1);
+            return;
         }
-        
+        ChangeTechniqueButtonsDependingOnCurrentLevel();
+        StartCoroutine(StartCounting());
+        StartCoroutine(ActivateOpponents());
     }
+    
     void Update()
     {
         continueTutorialButtonPressed = Input.GetKeyDown(KeyCode.Q);
     }
+    
     public void DefineCurrentLevel()
     {
         currentLevel = PlayerPrefs.GetInt("CurrentLevel");
@@ -159,6 +162,12 @@ public class LevelManager : MonoBehaviour
             StartCoroutine(WaitUntilBeingReadyToContinue(7));
 
     }
+    public void SetSpeedOfAnimatorsOfNinjas(float speed, params GameObject[] gameObjects)
+    {
+        foreach (GameObject obj in gameObjects)
+            obj.GetComponent<Animator>().speed = speed;
+    }
+    //ustawić animatory wszystkich przeciwników na 0 
     IEnumerator WaitUntilBeingReadyToContinue(int currentTutorialStep)
     {
         if (currentTutorialStep != tutorialStep)
@@ -170,6 +179,8 @@ public class LevelManager : MonoBehaviour
             isReadyToTutorial = false;
             if (tutorialStep == 7)
                 Time.timeScale = 0f;
+            //SetSpeedOfAnimatorsOfNinjas(0f, opponents); //opponent.readyToSpawn = false;
+                //Time.timeScale = 0f;
             yield return new WaitForEndOfFrame();
         }
         while (true)
@@ -186,13 +197,17 @@ public class LevelManager : MonoBehaviour
                     if (tutorialStep < 7)
                         StartCoroutine(WaitUntilBeingReadyToContinue(tutorialStep));
                     if (tutorialStep == 7)
-                    {
                         StartGame();
-                    }
                     if (tutorialStep == 8)
                     {
+                        //SetSpeedOfAnimatorsOfNinjas(1f, opponents);
                         Time.timeScale = 1f;
+                        //opponent.readyToSpawn = true;
+                        //opponent.readyToThrow = true;
+                        //opponent.speedOfNinja = 1f;
+                        //GetComponent<Animator>().is
                     }
+                    //Time.timeScale = 1f;
                     //continueTutorialButtonPressed = false;
                     yield break;
                 }

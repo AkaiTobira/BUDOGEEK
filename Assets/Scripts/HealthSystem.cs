@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
+    public AudioSource loseHPSound;
     public PlayerController player;
     public Image[] heartImages;
     void Start()
@@ -26,5 +27,6 @@ public class HealthSystem : MonoBehaviour
     public void ChangeHealthStatus(int hp)
     {
         ChangeTransparencyOfHeartImage(heartImages[hp]);
+        loseHPSound.Play();
     }
 }

@@ -8,13 +8,18 @@ public class GameSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("GameSettings") == 2) return;
+        if (PlayerPrefs.GetInt("GameSettings") == 1) return;
         SetScoreThresholds();
         SetTmpScores();
         SetScores();
         SetLevels();
         PlayerPrefs.SetInt("Currency", 0);
         PlayerPrefs.SetInt("Tutorial", 0);
+
+        PlayerPrefs.SetString("BasicKimono", "Bought");
+        PlayerPrefs.SetString("BasicBelt", "Bought");
+        PlayerPrefs.SetString("BasicBackground", "Bought");
+
         PlayerPrefs.SetInt("GameSettings", 1);
         PlayerPrefs.Save();
     }
@@ -60,11 +65,11 @@ public class GameSettings : MonoBehaviour
     }
     public void SetDiplomas()
     {
-        PlayerPrefs.SetInt($"Diploma1", 0);
-        PlayerPrefs.SetInt($"Diploma2", 0);
-        PlayerPrefs.SetInt($"Diploma3", 0);
-        PlayerPrefs.SetInt($"Diploma4", 0);
-        PlayerPrefs.SetInt($"Diploma5", 0);
-        PlayerPrefs.SetInt($"Diploma6", 0);
+        PlayerPrefs.SetInt("Diploma1", 0);
+        PlayerPrefs.SetInt("Diploma2", 0);
+        PlayerPrefs.SetInt("Diploma3", 0);
+        PlayerPrefs.SetInt("Diploma4", 0);
+        PlayerPrefs.SetInt("Diploma5", 0);
+        PlayerPrefs.SetInt("Diploma6", 0);
     }
 }

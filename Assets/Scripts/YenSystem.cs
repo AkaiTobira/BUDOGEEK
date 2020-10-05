@@ -12,6 +12,8 @@ public class YenSystem : MonoBehaviour
     public Animator leftKiay;
     public Animator rightKiay;
     private int numerOfNotDropYen = 0;
+    public AudioSource yenSound;
+    public AudioSource[] kiaySounds;
     void Start()
     {
         yen = PlayerPrefs.GetInt("Currency");
@@ -26,6 +28,7 @@ public class YenSystem : MonoBehaviour
     public void DropYen(int value)
     {
         yenAnimator.SetTrigger("DropYen");
+        yenSound.Play();
         StartCoroutine(WaitBeforeAddToWallet(value));
     }
     IEnumerator WaitBeforeAddToWallet(int value)
@@ -101,5 +104,7 @@ public class YenSystem : MonoBehaviour
         {
             leftKiay.SetTrigger("LeftKiay");
         }
+        //int rndId = Random.Range(0, 2);
+        kiaySounds[0].Play();
     }
 }

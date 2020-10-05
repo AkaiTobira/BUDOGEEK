@@ -10,6 +10,7 @@ public class LevelMenu : MonoBehaviour
     public Button[] levelButtons;
     public int chosenLevel;
     public bool isLevelChosen = false;
+    public Text[] levelTexts;
     /*
     public GameObject scrollBar;
     float scrollPosition = 0;
@@ -18,7 +19,7 @@ public class LevelMenu : MonoBehaviour
     */
     void Start()
     {
-        SavePlayerProgress();
+        //SavePlayerProgress();
         FillButtonsText();
         UnlockButtons();
     }
@@ -77,6 +78,8 @@ public class LevelMenu : MonoBehaviour
                 levelButtons[i].interactable = true;
                 Text text = levelButtons[i].GetComponentInChildren<Text>();
                 text.text = "";
+                Text text2 = levelTexts[i-1];
+                text2.text = "";
             }
         }
     }

@@ -22,6 +22,8 @@ public class SwipeSystem : MonoBehaviour
     public string techName;
     public string stanceName;
     public Image scrollViewItem;
+    public int widthOfScrollViewItem;
+    public int spacing = 150;
     //public Image scrollViewNameOfItem;
     private bool IsCenterPosition(int i)
     {
@@ -151,9 +153,9 @@ public class SwipeSystem : MonoBehaviour
     {
         //horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - (int)(scrollViewItem.sprite.rect.width + (scrollViewNameOfItem.sprite.rect.width - scrollViewItem.sprite.rect.width))) / 2;
         //horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - (int)(scrollViewItem.sprite.rect.width + (scrollViewNameOfItem.sprite.rect.width - scrollViewItem.sprite.rect.width))) / 2;
-        horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - (int)scrollViewItem.sprite.rect.width) / 2;
-        horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - (int)scrollViewItem.sprite.rect.width) / 2;
-        horizontalLayoutGroup.spacing = 150;
+        horizontalLayoutGroup.padding.left = (Screen.currentResolution.width - widthOfScrollViewItem) / 2;
+        horizontalLayoutGroup.padding.right = (Screen.currentResolution.width - widthOfScrollViewItem) / 2;
+        horizontalLayoutGroup.spacing = spacing;
     }
     private void ResetCurrentPositionsOfScrollItems()
     {

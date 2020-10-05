@@ -6,6 +6,7 @@ public class MenuTutorial : MonoBehaviour
 {
     public GameObject tutorial;
     public string nameOfTutorial;
+    private bool continueTutorialButtonPressed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class MenuTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        continueTutorialButtonPressed = Input.GetKeyDown(KeyCode.Q);
     }
     public void ShowInstruction()
     {
@@ -30,9 +31,9 @@ public class MenuTutorial : MonoBehaviour
         yield return new WaitForSeconds(3f);
         while (true)
         {
-            if (Input.touchCount > 0)
+            if (Input.touchCount > 0 || continueTutorialButtonPressed)
             {
-                if (Input.GetTouch(0).phase.Equals(TouchPhase.Ended))
+                if (continueTutorialButtonPressed || Input.GetTouch(0).phase.Equals(TouchPhase.Ended))
                 {
                     PlayerPrefs.SetInt(nameOfTutorial, 1);
                     tutorial.SetActive(false);
