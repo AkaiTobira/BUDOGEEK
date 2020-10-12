@@ -40,6 +40,7 @@ public class DefeatedMenu : MonoBehaviour
     }
     void Update()
     {
+        player = FindObjectOfType<PlayerController>();
         scoreText.text = "Wynik: " + scoreSystem.score;
     }
 

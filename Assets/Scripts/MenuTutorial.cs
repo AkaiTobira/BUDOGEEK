@@ -28,7 +28,7 @@ public class MenuTutorial : MonoBehaviour
     IEnumerator WaitUnlessBeingReadyToSkipTutorial()
     {
         tutorial.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         while (true)
         {
             if (Input.touchCount > 0 || continueTutorialButtonPressed)

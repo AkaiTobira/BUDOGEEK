@@ -12,6 +12,10 @@ public class HealthSystem : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
     }
+    void Update()
+    {
+        player = FindObjectOfType<PlayerController>();
+    }
     private void ChangeTransparencyOfHeartImage(Image heartImage)
     {
         Animator heartAnimator = heartImage.GetComponent<Animator>();

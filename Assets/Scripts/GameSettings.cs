@@ -20,6 +20,10 @@ public class GameSettings : MonoBehaviour
         PlayerPrefs.SetString("BasicBelt", "Bought");
         PlayerPrefs.SetString("BasicBackground", "Bought");
 
+        PlayerPrefs.SetString("kimono", "BasicKimono");
+        PlayerPrefs.SetString("belt", "BasicBelt");
+        PlayerPrefs.SetString("background", "BasicBackground");
+
         PlayerPrefs.SetInt("GameSettings", 1);
         PlayerPrefs.Save();
     }

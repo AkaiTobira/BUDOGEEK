@@ -46,6 +46,7 @@ public class TechniqueButtonsController : MonoBehaviour
     IEnumerator ChangeButton(string tag, GameObject[] buttons)
     {
         yield return new WaitForSeconds(0.8f);
+        playerController = FindObjectOfType<PlayerController>();
         if (ButtonChanger.CheckWhetherButtonShouldBeSwaped(levelManager.currentLevel, tag, playerController.idTechnique))
         {
             buttons[playerController.idTechnique - 1].SetActive(false);

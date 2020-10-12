@@ -16,6 +16,7 @@ public class Diploma : MonoBehaviour
     }
     void Update()
     {
+        player = FindObjectOfType<PlayerController>();
         //scoreText.text = "" + player.scorePoints;
         //scoreText.text = "" + player.jenCoins;
     }

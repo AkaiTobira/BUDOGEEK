@@ -14,6 +14,10 @@ public class DiplomasController : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         levelManager = FindObjectOfType<LevelManager>();
     }
+    void Update()
+    {
+        player = FindObjectOfType<PlayerController>();
+    }
     public void ShowDiplomaIfGainMaxScoreOfCurrentLevel()
     {
         if (levelManager.currentLevel == 6) return;

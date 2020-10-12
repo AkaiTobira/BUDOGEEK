@@ -14,11 +14,19 @@ public class YenSystem : MonoBehaviour
     private int numerOfNotDropYen = 0;
     public AudioSource yenSound;
     public AudioSource[] kiaySounds;
+    public int update;
     void Start()
     {
         yen = PlayerPrefs.GetInt("Currency");
         yenText.text = "" + yen;
-
+    }
+    void Update()
+    {
+        if (update == 1)
+        {
+            yen = PlayerPrefs.GetInt("Currency");
+            yenText.text = "" + yen;
+        }
     }
     public void AddToWallet(int value)
     {
@@ -96,6 +104,7 @@ public class YenSystem : MonoBehaviour
 
     public void ShowKiay()
     {
+        player = FindObjectOfType<PlayerController>();
         if (player.facingRight)
         {
             rightKiay.SetTrigger("RightKiay");

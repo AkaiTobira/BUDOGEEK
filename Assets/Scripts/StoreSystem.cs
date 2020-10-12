@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -52,6 +51,18 @@ public class StoreSystem : MonoBehaviour
     public Button[] useButtons;
     public Button[] buyButtons;
     public GameObject yen;
+    public GameObject[] commodities;
+    public GameObject[] requirements;
+    public string typeOfItem;
+    public int level;
+
+    public void DeactivateOtherCommodities()
+    {
+        foreach (GameObject item in commodities)
+        {
+            item.SetActive(false);
+        }
+    }
     public void SetOthersTextComponent()
     {
         foreach (Button item in useButtons)
@@ -65,15 +76,36 @@ public class StoreSystem : MonoBehaviour
         foreach (Button item in useButtons)
             item.interactable = true;
     }
-    public void GivePossibilityOfBuying(int level, int score, Button buyButton)
+    public void GivePossibilityOfBuyingAndHideRequirement(int level, int score, Button buyButton, GameObject requirement)
     {
         if (PlayerPrefs.GetInt($"HighScore{level}") >= score)
+        {
             buyButton.interactable = true;
+            requirement.SetActive(false);
+        }
     }
-    public void GiveCommoditiesPossibilityOfBuying()
+    public void GivePossibilityOfBuyingAndHideRequirement2(int level, int score, Button buyButton, GameObject requirement)
     {
-        for (int i = 0; i < buyButtons.Length; i++)
-            GivePossibilityOfBuying(1 + i, 100 + 50 * i, buyButtons[i]);
+        switch (typeOfItem)
+        {
+            case "kimono":
+            case "background":
+                if (PlayerPrefs.GetInt($"HighScore{level}") >= score && PlayerPrefs.GetInt($"HighScore{level + 1}") >= score)
+                {
+                    buyButton.interactable = true;
+                    requirement.SetActive(false);
+                }
+                break;
+            case "belt":
+                if (PlayerPrefs.GetInt($"HighScore{level}") >= score)
+                {
+                    buyButton.interactable = true;
+                    requirement.SetActive(false);
+                }
+                break;
+            default:
+                break; 
+        }
     }
     public void ResetCurrency()
     {
@@ -87,10 +119,21 @@ public class StoreSystem : MonoBehaviour
     }
     void Start()
     {
-        GiveCommoditiesPossibilityOfBuying();
+        switch (typeOfItem)
+        {
+            case "background":
+                GivePossibilityOfBuyingAndHideRequirement2(level, 50, buyButtons[0], requirements[0]);
+                break;
+            case "kimono":
+                GivePossibilityOfBuyingAndHideRequirement2(level, 75, buyButtons[0], requirements[0]);
+                break;
+            case "belt":
+                GivePossibilityOfBuyingAndHideRequirement2(level, 100, buyButtons[0], requirements[0]);
+                break;
+            default:
+                break;
+        }
     }
-
-
     void Update()
     {
 

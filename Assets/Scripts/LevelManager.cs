@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,8 +29,6 @@ public class LevelManager : MonoBehaviour
     public GameObject[] opponents;
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
-        opponent = FindObjectOfType<OpponentController>();
         DefineCurrentLevel();
         if (currentLevel == 0 && PlayerPrefs.GetInt("Tutorial") == 0)
         {
@@ -37,6 +36,8 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt("Tutorial", 1);
             return;
         }
+        opponent = FindObjectOfType<OpponentController>();
+        player = FindObjectOfType<PlayerController>();
         ChangeTechniqueButtonsDependingOnCurrentLevel();
         StartCoroutine(StartCounting());
         StartCoroutine(ActivateOpponents());

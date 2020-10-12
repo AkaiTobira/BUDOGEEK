@@ -18,7 +18,7 @@ public class OpponentController : MonoBehaviour
     public LevelManager levelManager;
     private const float TIME_TO_THROW_PILLOW = 0.66f;
     private const float TIME_TO_THROW_PLATE = 0.5f;
-    private float[] TIME_TO_SHOW_EFFECT = { 1f, 1.2f, 1.25f, 1f };
+    private float[] TIME_TO_SHOW_EFFECT = { 1f, 1.2f, 1.25f, 0.5f };
     private float[] SPEED_OF_ANIMATOR = { 0.7f, 0.8f, 0.9f, 1f, 1.05f, 1.1f, 1.15f };
     private float[] SPEED_OF_ANIMATOR_THROWING_OBJECTS = { 1f, 1.05f, 1.1f, 1.15f, 1.2f, 1.25f, 1.3f };
     private float timerToSpawnEnemy = 0;
